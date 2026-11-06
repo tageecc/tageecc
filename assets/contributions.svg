@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="510" viewBox="0 0 1200 510" role="img" aria-labelledby="title desc">
 <title id="title">tageecc — 3D contribution city</title>
-<desc id="desc">6,934 contributions from 2025-11-02 to 2026-11-07. One building per day; height is proportional to the square root of the contribution count.</desc>
+<desc id="desc">6,935 contributions from 2025-11-02 to 2026-11-06. One building per day; height is proportional to the square root of the contribution count.</desc>
 <defs>
   <radialGradient id="sky" cx="65%" cy="40%" r="75%"><stop stop-color="#241039"/><stop offset="1" stop-color="#090312"/></radialGradient>
   <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="9"/></filter>
@@ -15,8 +15,8 @@
 </defs>
 <rect width="1200" height="510" rx="12" fill="url(#sky)"/>
 <text class="heading" x="42" y="54">CONTRIBUTION CITY</text>
-<text x="42" y="84">tageecc / 2025-11-02 — 2026-11-07</text>
-<text x="1158" y="54" text-anchor="end" fill="#00e5d0">6,934 contributions · 229 active days</text>
+<text x="42" y="84">tageecc / 2025-11-02 — 2026-11-06</text>
+<text x="1158" y="54" text-anchor="end" fill="#00e5d0">6,935 contributions · 230 active days</text>
 <polygon points="115.61,348.44 1029.19,235.46 1138.39,321.26 224.81,434.24" fill="#000" opacity=".6" filter="url(#shadow)"/>
 <polygon points="107.61,329.44 1021.19,216.46 1130.39,302.26 216.81,415.24" fill="#10091f" stroke="url(#edge)" stroke-width="1.2"/>
 <line x1="120.00" y1="333.00" x2="218.00" y2="410.00" stroke="#322040" stroke-width=".65"/>
@@ -239,16 +239,16 @@
 <g data-date="2026-08-09" data-count="0"><title>2026-08-09: 0 contributions</title>
 <polygon points="802.96,250.07 815.19,248.56 825.27,256.48 813.04,257.99" fill="#30204e" stroke="#423051" stroke-width=".65"/>
 </g>
-<g data-date="2026-09-14" data-count="26"><title>2026-09-14: 26 contributions</title>
-<polygon points="911.95,258.49 924.18,256.98 924.18,221.88 911.95,223.39" fill="#00e5d0" fill-opacity=".3" stroke="#00e5d0" stroke-opacity=".55" stroke-width=".55"/>
-<polygon points="914.10,249.06 924.18,256.98 924.18,221.88 914.10,213.96" fill="#00e5d0" fill-opacity=".5" stroke="#00e5d0" stroke-opacity=".7" stroke-width=".55"/>
+<g data-date="2026-09-14" data-count="27"><title>2026-09-14: 27 contributions</title>
+<polygon points="911.95,258.49 924.18,256.98 924.18,221.28 911.95,222.79" fill="#00e5d0" fill-opacity=".3" stroke="#00e5d0" stroke-opacity=".55" stroke-width=".55"/>
+<polygon points="914.10,249.06 924.18,256.98 924.18,221.28 914.10,213.36" fill="#00e5d0" fill-opacity=".5" stroke="#00e5d0" stroke-opacity=".7" stroke-width=".55"/>
 <line x1="911.95" y1="248.49" x2="924.18" y2="246.98" stroke="#00e5d0" stroke-opacity=".55" stroke-width=".7"/>
 <line x1="914.10" y1="239.06" x2="924.18" y2="246.98" stroke="#00e5d0" stroke-opacity=".35" stroke-width=".7"/>
 <line x1="911.95" y1="236.49" x2="924.18" y2="234.98" stroke="#00e5d0" stroke-opacity=".55" stroke-width=".7"/>
 <line x1="914.10" y1="227.06" x2="924.18" y2="234.98" stroke="#00e5d0" stroke-opacity=".35" stroke-width=".7"/>
 <line x1="911.95" y1="224.49" x2="924.18" y2="222.98" stroke="#00e5d0" stroke-opacity=".55" stroke-width=".7"/>
 <line x1="914.10" y1="215.06" x2="924.18" y2="222.98" stroke="#00e5d0" stroke-opacity=".35" stroke-width=".7"/>
-<polygon points="901.87,215.47 914.10,213.96 924.18,221.88 911.95,223.39" fill="#00e5d0" stroke="#00e5d0" stroke-width=".65"/>
+<polygon points="901.87,214.87 914.10,213.36 924.18,221.28 911.95,222.79" fill="#00e5d0" stroke="#00e5d0" stroke-width=".65"/>
 </g>
 <g data-date="2026-10-20" data-count="3"><title>2026-10-20: 3 contributions</title>
 <polygon points="1010.85,258.99 1023.08,257.48 1023.08,242.91 1010.85,244.42" fill="#3a8dff" fill-opacity=".3" stroke="#3a8dff" stroke-opacity=".55" stroke-width=".55"/>
@@ -403,14 +403,14 @@
 <g data-date="2026-08-10" data-count="0"><title>2026-08-10: 0 contributions</title>
 <polygon points="816.96,261.07 829.19,259.56 839.27,267.48 827.04,268.99" fill="#30204e" stroke="#423051" stroke-width=".65"/>
 </g>
-<g data-date="2026-09-15" data-count="21"><title>2026-09-15: 21 contributions</title>
-<polygon points="925.95,269.49 938.18,267.98 938.18,236.03 925.95,237.54" fill="#00e5d0" fill-opacity=".3" stroke="#00e5d0" stroke-opacity=".55" stroke-width=".55"/>
-<polygon points="928.10,260.06 938.18,267.98 938.18,236.03 928.10,228.11" fill="#00e5d0" fill-opacity=".5" stroke="#00e5d0" stroke-opacity=".7" stroke-width=".55"/>
+<g data-date="2026-09-15" data-count="20"><title>2026-09-15: 20 contributions</title>
+<polygon points="925.95,269.49 938.18,267.98 938.18,236.70 925.95,238.21" fill="#00e5d0" fill-opacity=".3" stroke="#00e5d0" stroke-opacity=".55" stroke-width=".55"/>
+<polygon points="928.10,260.06 938.18,267.98 938.18,236.70 928.10,228.78" fill="#00e5d0" fill-opacity=".5" stroke="#00e5d0" stroke-opacity=".7" stroke-width=".55"/>
 <line x1="925.95" y1="259.49" x2="938.18" y2="257.98" stroke="#00e5d0" stroke-opacity=".55" stroke-width=".7"/>
 <line x1="928.10" y1="250.06" x2="938.18" y2="257.98" stroke="#00e5d0" stroke-opacity=".35" stroke-width=".7"/>
 <line x1="925.95" y1="247.49" x2="938.18" y2="245.98" stroke="#00e5d0" stroke-opacity=".55" stroke-width=".7"/>
 <line x1="928.10" y1="238.06" x2="938.18" y2="245.98" stroke="#00e5d0" stroke-opacity=".35" stroke-width=".7"/>
-<polygon points="915.87,229.62 928.10,228.11 938.18,236.03 925.95,237.54" fill="#00e5d0" stroke="#00e5d0" stroke-width=".65"/>
+<polygon points="915.87,230.29 928.10,228.78 938.18,236.70 925.95,238.21" fill="#00e5d0" stroke="#00e5d0" stroke-width=".65"/>
 </g>
 <g data-date="2026-10-21" data-count="19"><title>2026-10-21: 19 contributions</title>
 <polygon points="1024.85,269.99 1037.08,268.48 1037.08,237.89 1024.85,239.40" fill="#00e5d0" fill-opacity=".3" stroke="#00e5d0" stroke-opacity=".55" stroke-width=".55"/>
@@ -635,9 +635,9 @@
 <line x1="628.40" y1="213.66" x2="638.48" y2="221.58" stroke="#bc78ff" stroke-opacity=".35" stroke-width=".7"/>
 <polygon points="616.17,213.60 628.40,212.09 638.48,220.01 626.25,221.52" fill="#bc78ff" stroke="#bc78ff" stroke-width=".65"/>
 </g>
-<g data-date="2026-06-29" data-count="56"><title>2026-06-29: 56 contributions</title>
-<polygon points="725.16,281.59 737.38,280.08 737.38,230.43 725.16,231.94" fill="#bc78ff" fill-opacity=".3" stroke="#bc78ff" stroke-opacity=".55" stroke-width=".55"/>
-<polygon points="727.30,272.16 737.38,280.08 737.38,230.43 727.30,222.51" fill="#bc78ff" fill-opacity=".5" stroke="#bc78ff" stroke-opacity=".7" stroke-width=".55"/>
+<g data-date="2026-06-29" data-count="57"><title>2026-06-29: 57 contributions</title>
+<polygon points="725.16,281.59 737.38,280.08 737.38,230.03 725.16,231.54" fill="#bc78ff" fill-opacity=".3" stroke="#bc78ff" stroke-opacity=".55" stroke-width=".55"/>
+<polygon points="727.30,272.16 737.38,280.08 737.38,230.03 727.30,222.11" fill="#bc78ff" fill-opacity=".5" stroke="#bc78ff" stroke-opacity=".7" stroke-width=".55"/>
 <line x1="725.16" y1="271.59" x2="737.38" y2="270.08" stroke="#bc78ff" stroke-opacity=".55" stroke-width=".7"/>
 <line x1="727.30" y1="262.16" x2="737.38" y2="270.08" stroke="#bc78ff" stroke-opacity=".35" stroke-width=".7"/>
 <line x1="725.16" y1="259.59" x2="737.38" y2="258.08" stroke="#bc78ff" stroke-opacity=".55" stroke-width=".7"/>
@@ -646,7 +646,7 @@
 <line x1="727.30" y1="238.16" x2="737.38" y2="246.08" stroke="#bc78ff" stroke-opacity=".35" stroke-width=".7"/>
 <line x1="725.16" y1="235.59" x2="737.38" y2="234.08" stroke="#bc78ff" stroke-opacity=".55" stroke-width=".7"/>
 <line x1="727.30" y1="226.16" x2="737.38" y2="234.08" stroke="#bc78ff" stroke-opacity=".35" stroke-width=".7"/>
-<polygon points="715.08,224.02 727.30,222.51 737.38,230.43 725.16,231.94" fill="#bc78ff" stroke="#bc78ff" stroke-width=".65"/>
+<polygon points="715.08,223.62 727.30,222.11 737.38,230.03 725.16,231.54" fill="#bc78ff" stroke="#bc78ff" stroke-width=".65"/>
 </g>
 <g data-date="2026-08-04" data-count="1"><title>2026-08-04: 1 contributions</title>
 <polygon points="824.06,282.09 836.29,280.58 836.29,270.48 824.06,271.99" fill="#3a8dff" fill-opacity=".3" stroke="#3a8dff" stroke-opacity=".55" stroke-width=".55"/>
@@ -790,14 +790,14 @@
 <g data-date="2026-05-03" data-count="0"><title>2026-05-03: 0 contributions</title>
 <polygon points="565.23,279.47 577.45,277.96 587.53,285.88 575.31,287.39" fill="#30204e" stroke="#423051" stroke-width=".65"/>
 </g>
-<g data-date="2026-11-06" data-count="12"><title>2026-11-06: 12 contributions</title>
-<polygon points="1086.82,287.79 1099.04,286.28 1099.04,261.15 1086.82,262.66" fill="#00e5d0" fill-opacity=".3" stroke="#00e5d0" stroke-opacity=".55" stroke-width=".55"/>
-<polygon points="1088.96,278.36 1099.04,286.28 1099.04,261.15 1088.96,253.23" fill="#00e5d0" fill-opacity=".5" stroke="#00e5d0" stroke-opacity=".7" stroke-width=".55"/>
+<g data-date="2026-11-06" data-count="13"><title>2026-11-06: 13 contributions</title>
+<polygon points="1086.82,287.79 1099.04,286.28 1099.04,260.28 1086.82,261.80" fill="#00e5d0" fill-opacity=".3" stroke="#00e5d0" stroke-opacity=".55" stroke-width=".55"/>
+<polygon points="1088.96,278.36 1099.04,286.28 1099.04,260.28 1088.96,252.36" fill="#00e5d0" fill-opacity=".5" stroke="#00e5d0" stroke-opacity=".7" stroke-width=".55"/>
 <line x1="1086.82" y1="277.79" x2="1099.04" y2="276.28" stroke="#00e5d0" stroke-opacity=".55" stroke-width=".7"/>
 <line x1="1088.96" y1="268.36" x2="1099.04" y2="276.28" stroke="#00e5d0" stroke-opacity=".35" stroke-width=".7"/>
 <line x1="1086.82" y1="265.79" x2="1099.04" y2="264.28" stroke="#00e5d0" stroke-opacity=".55" stroke-width=".7"/>
 <line x1="1088.96" y1="256.36" x2="1099.04" y2="264.28" stroke="#00e5d0" stroke-opacity=".35" stroke-width=".7"/>
-<polygon points="1076.74,254.74 1088.96,253.23 1099.04,261.15 1086.82,262.66" fill="#00e5d0" stroke="#00e5d0" stroke-width=".65"/>
+<polygon points="1076.74,253.88 1088.96,252.36 1099.04,260.28 1086.82,261.80" fill="#00e5d0" stroke="#00e5d0" stroke-width=".65"/>
 </g>
 <g data-date="2026-06-08" data-count="14"><title>2026-06-08: 14 contributions</title>
 <polygon points="674.21,287.89 686.44,286.38 686.44,259.55 674.21,261.07" fill="#00e5d0" fill-opacity=".3" stroke="#00e5d0" stroke-opacity=".55" stroke-width=".55"/>
@@ -910,9 +910,9 @@
 <line x1="642.40" y1="236.66" x2="652.48" y2="244.58" stroke="#bc78ff" stroke-opacity=".35" stroke-width=".7"/>
 <polygon points="630.17,225.96 642.40,224.44 652.48,232.36 640.25,233.88" fill="#bc78ff" stroke="#bc78ff" stroke-width=".65"/>
 </g>
-<g data-date="2026-06-30" data-count="51"><title>2026-06-30: 51 contributions</title>
-<polygon points="739.16,292.59 751.38,291.08 751.38,243.52 739.16,245.03" fill="#bc78ff" fill-opacity=".3" stroke="#bc78ff" stroke-opacity=".55" stroke-width=".55"/>
-<polygon points="741.30,283.16 751.38,291.08 751.38,243.52 741.30,235.60" fill="#bc78ff" fill-opacity=".5" stroke="#bc78ff" stroke-opacity=".7" stroke-width=".55"/>
+<g data-date="2026-06-30" data-count="50"><title>2026-06-30: 50 contributions</title>
+<polygon points="739.16,292.59 751.38,291.08 751.38,243.95 739.16,245.46" fill="#bc78ff" fill-opacity=".3" stroke="#bc78ff" stroke-opacity=".55" stroke-width=".55"/>
+<polygon points="741.30,283.16 751.38,291.08 751.38,243.95 741.30,236.03" fill="#bc78ff" fill-opacity=".5" stroke="#bc78ff" stroke-opacity=".7" stroke-width=".55"/>
 <line x1="739.16" y1="282.59" x2="751.38" y2="281.08" stroke="#bc78ff" stroke-opacity=".55" stroke-width=".7"/>
 <line x1="741.30" y1="273.16" x2="751.38" y2="281.08" stroke="#bc78ff" stroke-opacity=".35" stroke-width=".7"/>
 <line x1="739.16" y1="270.59" x2="751.38" y2="269.08" stroke="#bc78ff" stroke-opacity=".55" stroke-width=".7"/>
@@ -921,7 +921,7 @@
 <line x1="741.30" y1="249.16" x2="751.38" y2="257.08" stroke="#bc78ff" stroke-opacity=".35" stroke-width=".7"/>
 <line x1="739.16" y1="246.59" x2="751.38" y2="245.08" stroke="#bc78ff" stroke-opacity=".55" stroke-width=".7"/>
 <line x1="741.30" y1="237.16" x2="751.38" y2="245.08" stroke="#bc78ff" stroke-opacity=".35" stroke-width=".7"/>
-<polygon points="729.08,237.11 741.30,235.60 751.38,243.52 739.16,245.03" fill="#bc78ff" stroke="#bc78ff" stroke-width=".65"/>
+<polygon points="729.08,237.54 741.30,236.03 751.38,243.95 739.16,245.46" fill="#bc78ff" stroke="#bc78ff" stroke-width=".65"/>
 </g>
 <g data-date="2026-08-05" data-count="2"><title>2026-08-05: 2 contributions</title>
 <polygon points="838.06,293.09 850.29,291.58 850.29,278.95 838.06,280.46" fill="#3a8dff" fill-opacity=".3" stroke="#3a8dff" stroke-opacity=".55" stroke-width=".55"/>
@@ -949,12 +949,12 @@
 <line x1="1038.02" y1="262.66" x2="1048.10" y2="270.58" stroke="#00e5d0" stroke-opacity=".35" stroke-width=".7"/>
 <polygon points="1025.79,255.58 1038.02,254.07 1048.10,261.99 1035.87,263.50" fill="#00e5d0" stroke="#00e5d0" stroke-width=".65"/>
 </g>
-<g data-date="2026-05-18" data-count="8"><title>2026-05-18: 8 contributions</title>
-<polygon points="623.27,294.19 635.50,292.68 635.50,271.42 623.27,272.94" fill="#3a8dff" fill-opacity=".3" stroke="#3a8dff" stroke-opacity=".55" stroke-width=".55"/>
-<polygon points="625.42,284.76 635.50,292.68 635.50,271.42 625.42,263.50" fill="#3a8dff" fill-opacity=".5" stroke="#3a8dff" stroke-opacity=".7" stroke-width=".55"/>
+<g data-date="2026-05-18" data-count="9"><title>2026-05-18: 9 contributions</title>
+<polygon points="623.27,294.19 635.50,292.68 635.50,270.38 623.27,271.89" fill="#3a8dff" fill-opacity=".3" stroke="#3a8dff" stroke-opacity=".55" stroke-width=".55"/>
+<polygon points="625.42,284.76 635.50,292.68 635.50,270.38 625.42,262.46" fill="#3a8dff" fill-opacity=".5" stroke="#3a8dff" stroke-opacity=".7" stroke-width=".55"/>
 <line x1="623.27" y1="284.19" x2="635.50" y2="282.68" stroke="#3a8dff" stroke-opacity=".55" stroke-width=".7"/>
 <line x1="625.42" y1="274.76" x2="635.50" y2="282.68" stroke="#3a8dff" stroke-opacity=".35" stroke-width=".7"/>
-<polygon points="613.19,265.02 625.42,263.50 635.50,271.42 623.27,272.94" fill="#3a8dff" stroke="#3a8dff" stroke-width=".65"/>
+<polygon points="613.19,263.97 625.42,262.46 635.50,270.38 623.27,271.89" fill="#3a8dff" stroke="#3a8dff" stroke-width=".65"/>
 </g>
 <g data-date="2026-06-23" data-count="13"><title>2026-06-23: 13 contributions</title>
 <polygon points="722.18,294.69 734.40,293.18 734.40,267.18 722.18,268.70" fill="#00e5d0" fill-opacity=".3" stroke="#00e5d0" stroke-opacity=".55" stroke-width=".55"/>
@@ -1049,9 +1049,6 @@
 <line x1="589.31" y1="288.39" x2="601.53" y2="286.88" stroke="#3a8dff" stroke-opacity=".55" stroke-width=".7"/>
 <line x1="591.45" y1="278.96" x2="601.53" y2="286.88" stroke="#3a8dff" stroke-opacity=".35" stroke-width=".7"/>
 <polygon points="579.23,277.84 591.45,276.33 601.53,284.25 589.31,285.76" fill="#3a8dff" stroke="#3a8dff" stroke-width=".65"/>
-</g>
-<g data-date="2026-11-07" data-count="0"><title>2026-11-07: 0 contributions</title>
-<polygon points="1090.74,290.87 1102.96,289.36 1113.04,297.28 1100.82,298.79" fill="#30204e" stroke="#423051" stroke-width=".65"/>
 </g>
 <g data-date="2026-06-09" data-count="15"><title>2026-06-09: 15 contributions</title>
 <polygon points="688.21,298.89 700.44,297.38 700.44,269.75 688.21,271.27" fill="#00e5d0" fill-opacity=".3" stroke="#00e5d0" stroke-opacity=".55" stroke-width=".55"/>
@@ -1228,12 +1225,12 @@
 <line x1="1052.02" y1="261.66" x2="1062.10" y2="269.58" stroke="#00e5d0" stroke-opacity=".35" stroke-width=".7"/>
 <polygon points="1039.79,259.76 1052.02,258.25 1062.10,266.17 1049.87,267.68" fill="#00e5d0" stroke="#00e5d0" stroke-width=".65"/>
 </g>
-<g data-date="2026-05-19" data-count="4"><title>2026-05-19: 4 contributions</title>
-<polygon points="637.27,305.19 649.50,303.68 649.50,287.48 637.27,288.99" fill="#3a8dff" fill-opacity=".3" stroke="#3a8dff" stroke-opacity=".55" stroke-width=".55"/>
-<polygon points="639.42,295.76 649.50,303.68 649.50,287.48 639.42,279.56" fill="#3a8dff" fill-opacity=".5" stroke="#3a8dff" stroke-opacity=".7" stroke-width=".55"/>
+<g data-date="2026-05-19" data-count="3"><title>2026-05-19: 3 contributions</title>
+<polygon points="637.27,305.19 649.50,303.68 649.50,289.11 637.27,290.62" fill="#3a8dff" fill-opacity=".3" stroke="#3a8dff" stroke-opacity=".55" stroke-width=".55"/>
+<polygon points="639.42,295.76 649.50,303.68 649.50,289.11 639.42,281.19" fill="#3a8dff" fill-opacity=".5" stroke="#3a8dff" stroke-opacity=".7" stroke-width=".55"/>
 <line x1="637.27" y1="295.19" x2="649.50" y2="293.68" stroke="#3a8dff" stroke-opacity=".55" stroke-width=".7"/>
 <line x1="639.42" y1="285.76" x2="649.50" y2="293.68" stroke="#3a8dff" stroke-opacity=".35" stroke-width=".7"/>
-<polygon points="627.19,281.07 639.42,279.56 649.50,287.48 637.27,288.99" fill="#3a8dff" stroke="#3a8dff" stroke-width=".65"/>
+<polygon points="627.19,282.70 639.42,281.19 649.50,289.11 637.27,290.62" fill="#3a8dff" stroke="#3a8dff" stroke-width=".65"/>
 </g>
 <g data-date="2026-06-24" data-count="147"><title>2026-06-24: 147 contributions</title>
 <polygon points="736.18,305.69 748.40,304.18 748.40,226.23 736.18,227.74" fill="#ff53aa" fill-opacity=".3" stroke="#ff53aa" stroke-opacity=".55" stroke-width=".55"/>
@@ -1266,16 +1263,16 @@
 <polygon points="424.62,296.86 434.70,304.78 434.70,294.68 424.62,286.76" fill="#3a8dff" fill-opacity=".5" stroke="#3a8dff" stroke-opacity=".7" stroke-width=".55"/>
 <polygon points="412.40,288.27 424.62,286.76 434.70,294.68 422.48,296.19" fill="#3a8dff" stroke="#3a8dff" stroke-width=".65"/>
 </g>
-<g data-date="2026-09-04" data-count="32"><title>2026-09-04: 32 contributions</title>
-<polygon points="933.99,306.69 946.21,305.18 946.21,266.67 933.99,268.18" fill="#00e5d0" fill-opacity=".3" stroke="#00e5d0" stroke-opacity=".55" stroke-width=".55"/>
-<polygon points="936.13,297.26 946.21,305.18 946.21,266.67 936.13,258.75" fill="#00e5d0" fill-opacity=".5" stroke="#00e5d0" stroke-opacity=".7" stroke-width=".55"/>
+<g data-date="2026-09-04" data-count="33"><title>2026-09-04: 33 contributions</title>
+<polygon points="933.99,306.69 946.21,305.18 946.21,266.14 933.99,267.65" fill="#00e5d0" fill-opacity=".3" stroke="#00e5d0" stroke-opacity=".55" stroke-width=".55"/>
+<polygon points="936.13,297.26 946.21,305.18 946.21,266.14 936.13,258.22" fill="#00e5d0" fill-opacity=".5" stroke="#00e5d0" stroke-opacity=".7" stroke-width=".55"/>
 <line x1="933.99" y1="296.69" x2="946.21" y2="295.18" stroke="#00e5d0" stroke-opacity=".55" stroke-width=".7"/>
 <line x1="936.13" y1="287.26" x2="946.21" y2="295.18" stroke="#00e5d0" stroke-opacity=".35" stroke-width=".7"/>
 <line x1="933.99" y1="284.69" x2="946.21" y2="283.18" stroke="#00e5d0" stroke-opacity=".55" stroke-width=".7"/>
 <line x1="936.13" y1="275.26" x2="946.21" y2="283.18" stroke="#00e5d0" stroke-opacity=".35" stroke-width=".7"/>
 <line x1="933.99" y1="272.69" x2="946.21" y2="271.18" stroke="#00e5d0" stroke-opacity=".55" stroke-width=".7"/>
 <line x1="936.13" y1="263.26" x2="946.21" y2="271.18" stroke="#00e5d0" stroke-opacity=".35" stroke-width=".7"/>
-<polygon points="923.91,260.26 936.13,258.75 946.21,266.67 933.99,268.18" fill="#00e5d0" stroke="#00e5d0" stroke-width=".65"/>
+<polygon points="923.91,259.73 936.13,258.22 946.21,266.14 933.99,267.65" fill="#00e5d0" stroke="#00e5d0" stroke-width=".65"/>
 </g>
 <g data-date="2026-04-06" data-count="2"><title>2026-04-06: 2 contributions</title>
 <polygon points="521.38,306.79 533.61,305.28 533.61,292.65 521.38,294.16" fill="#3a8dff" fill-opacity=".3" stroke="#3a8dff" stroke-opacity=".55" stroke-width=".55"/>
@@ -1535,9 +1532,9 @@
 <line x1="438.62" y1="297.86" x2="448.70" y2="305.78" stroke="#3a8dff" stroke-opacity=".35" stroke-width=".7"/>
 <polygon points="426.40,296.74 438.62,295.23 448.70,303.15 436.48,304.66" fill="#3a8dff" stroke="#3a8dff" stroke-width=".65"/>
 </g>
-<g data-date="2026-09-05" data-count="57"><title>2026-09-05: 57 contributions</title>
-<polygon points="947.99,317.69 960.21,316.18 960.21,266.13 947.99,267.64" fill="#bc78ff" fill-opacity=".3" stroke="#bc78ff" stroke-opacity=".55" stroke-width=".55"/>
-<polygon points="950.13,308.26 960.21,316.18 960.21,266.13 950.13,258.21" fill="#bc78ff" fill-opacity=".5" stroke="#bc78ff" stroke-opacity=".7" stroke-width=".55"/>
+<g data-date="2026-09-05" data-count="56"><title>2026-09-05: 56 contributions</title>
+<polygon points="947.99,317.69 960.21,316.18 960.21,266.53 947.99,268.04" fill="#bc78ff" fill-opacity=".3" stroke="#bc78ff" stroke-opacity=".55" stroke-width=".55"/>
+<polygon points="950.13,308.26 960.21,316.18 960.21,266.53 950.13,258.61" fill="#bc78ff" fill-opacity=".5" stroke="#bc78ff" stroke-opacity=".7" stroke-width=".55"/>
 <line x1="947.99" y1="307.69" x2="960.21" y2="306.18" stroke="#bc78ff" stroke-opacity=".55" stroke-width=".7"/>
 <line x1="950.13" y1="298.26" x2="960.21" y2="306.18" stroke="#bc78ff" stroke-opacity=".35" stroke-width=".7"/>
 <line x1="947.99" y1="295.69" x2="960.21" y2="294.18" stroke="#bc78ff" stroke-opacity=".55" stroke-width=".7"/>
@@ -1546,7 +1543,7 @@
 <line x1="950.13" y1="274.26" x2="960.21" y2="282.18" stroke="#bc78ff" stroke-opacity=".35" stroke-width=".7"/>
 <line x1="947.99" y1="271.69" x2="960.21" y2="270.18" stroke="#bc78ff" stroke-opacity=".55" stroke-width=".7"/>
 <line x1="950.13" y1="262.26" x2="960.21" y2="270.18" stroke="#bc78ff" stroke-opacity=".35" stroke-width=".7"/>
-<polygon points="937.91,259.72 950.13,258.21 960.21,266.13 947.99,267.64" fill="#bc78ff" stroke="#bc78ff" stroke-width=".65"/>
+<polygon points="937.91,260.12 950.13,258.61 960.21,266.53 947.99,268.04" fill="#bc78ff" stroke="#bc78ff" stroke-width=".65"/>
 </g>
 <g data-date="2026-04-07" data-count="1"><title>2026-04-07: 1 contributions</title>
 <polygon points="535.38,317.79 547.61,316.28 547.61,306.18 535.38,307.69" fill="#3a8dff" fill-opacity=".3" stroke="#3a8dff" stroke-opacity=".55" stroke-width=".55"/>
@@ -1726,8 +1723,10 @@
 <g data-date="2026-08-08" data-count="0"><title>2026-08-08: 0 contributions</title>
 <polygon points="869.98,318.17 882.21,316.66 892.29,324.58 880.06,326.09" fill="#30204e" stroke="#423051" stroke-width=".65"/>
 </g>
-<g data-date="2026-03-10" data-count="0"><title>2026-03-10: 0 contributions</title>
-<polygon points="457.38,318.27 469.60,316.76 479.68,324.68 467.46,326.19" fill="#30204e" stroke="#423051" stroke-width=".65"/>
+<g data-date="2026-03-10" data-count="1"><title>2026-03-10: 1 contributions</title>
+<polygon points="467.46,326.19 479.68,324.68 479.68,314.58 467.46,316.09" fill="#3a8dff" fill-opacity=".3" stroke="#3a8dff" stroke-opacity=".55" stroke-width=".55"/>
+<polygon points="469.60,316.76 479.68,324.68 479.68,314.58 469.60,306.66" fill="#3a8dff" fill-opacity=".5" stroke="#3a8dff" stroke-opacity=".7" stroke-width=".55"/>
+<polygon points="457.38,308.17 469.60,306.66 479.68,314.58 467.46,316.09" fill="#3a8dff" stroke="#3a8dff" stroke-width=".65"/>
 </g>
 <g data-date="2026-04-15" data-count="2"><title>2026-04-15: 2 contributions</title>
 <polygon points="566.36,326.69 578.59,325.18 578.59,312.55 566.36,314.06" fill="#3a8dff" fill-opacity=".3" stroke="#3a8dff" stroke-opacity=".55" stroke-width=".55"/>
@@ -1811,9 +1810,9 @@
 <g data-date="2025-12-14" data-count="0"><title>2025-12-14: 0 contributions</title>
 <polygon points="225.60,321.47 237.83,319.96 247.91,327.88 235.68,329.39" fill="#30204e" stroke="#423051" stroke-width=".65"/>
 </g>
-<g data-date="2026-06-19" data-count="83"><title>2026-06-19: 83 contributions</title>
-<polygon points="747.19,329.79 759.42,328.28 759.42,268.71 747.19,270.22" fill="#bc78ff" fill-opacity=".3" stroke="#bc78ff" stroke-opacity=".55" stroke-width=".55"/>
-<polygon points="749.34,320.36 759.42,328.28 759.42,268.71 749.34,260.79" fill="#bc78ff" fill-opacity=".5" stroke="#bc78ff" stroke-opacity=".7" stroke-width=".55"/>
+<g data-date="2026-06-19" data-count="84"><title>2026-06-19: 84 contributions</title>
+<polygon points="747.19,329.79 759.42,328.28 759.42,268.37 747.19,269.89" fill="#bc78ff" fill-opacity=".3" stroke="#bc78ff" stroke-opacity=".55" stroke-width=".55"/>
+<polygon points="749.34,320.36 759.42,328.28 759.42,268.37 749.34,260.45" fill="#bc78ff" fill-opacity=".5" stroke="#bc78ff" stroke-opacity=".7" stroke-width=".55"/>
 <line x1="747.19" y1="319.79" x2="759.42" y2="318.28" stroke="#bc78ff" stroke-opacity=".55" stroke-width=".7"/>
 <line x1="749.34" y1="310.36" x2="759.42" y2="318.28" stroke="#bc78ff" stroke-opacity=".35" stroke-width=".7"/>
 <line x1="747.19" y1="307.79" x2="759.42" y2="306.28" stroke="#bc78ff" stroke-opacity=".55" stroke-width=".7"/>
@@ -1824,7 +1823,7 @@
 <line x1="749.34" y1="274.36" x2="759.42" y2="282.28" stroke="#bc78ff" stroke-opacity=".35" stroke-width=".7"/>
 <line x1="747.19" y1="271.79" x2="759.42" y2="270.28" stroke="#bc78ff" stroke-opacity=".55" stroke-width=".7"/>
 <line x1="749.34" y1="262.36" x2="759.42" y2="270.28" stroke="#bc78ff" stroke-opacity=".35" stroke-width=".7"/>
-<polygon points="737.11,262.30 749.34,260.79 759.42,268.71 747.19,270.22" fill="#bc78ff" stroke="#bc78ff" stroke-width=".65"/>
+<polygon points="737.11,261.97 749.34,260.45 759.42,268.37 747.19,269.89" fill="#bc78ff" stroke="#bc78ff" stroke-width=".65"/>
 </g>
 <g data-date="2026-01-19" data-count="0"><title>2026-01-19: 0 contributions</title>
 <polygon points="324.51,321.97 336.74,320.46 346.82,328.38 334.59,329.89" fill="#30204e" stroke="#423051" stroke-width=".65"/>
@@ -1984,14 +1983,14 @@
 <g data-date="2026-02-03" data-count="0"><title>2026-02-03: 0 contributions</title>
 <polygon points="372.47,328.77 384.70,327.26 394.78,335.18 382.55,336.69" fill="#30204e" stroke="#423051" stroke-width=".65"/>
 </g>
-<g data-date="2026-03-11" data-count="16"><title>2026-03-11: 16 contributions</title>
-<polygon points="481.46,337.19 493.68,335.68 493.68,307.28 481.46,308.79" fill="#00e5d0" fill-opacity=".3" stroke="#00e5d0" stroke-opacity=".55" stroke-width=".55"/>
-<polygon points="483.60,327.76 493.68,335.68 493.68,307.28 483.60,299.36" fill="#00e5d0" fill-opacity=".5" stroke="#00e5d0" stroke-opacity=".7" stroke-width=".55"/>
+<g data-date="2026-03-11" data-count="15"><title>2026-03-11: 15 contributions</title>
+<polygon points="481.46,337.19 493.68,335.68 493.68,308.05 481.46,309.57" fill="#00e5d0" fill-opacity=".3" stroke="#00e5d0" stroke-opacity=".55" stroke-width=".55"/>
+<polygon points="483.60,327.76 493.68,335.68 493.68,308.05 483.60,300.13" fill="#00e5d0" fill-opacity=".5" stroke="#00e5d0" stroke-opacity=".7" stroke-width=".55"/>
 <line x1="481.46" y1="327.19" x2="493.68" y2="325.68" stroke="#00e5d0" stroke-opacity=".55" stroke-width=".7"/>
 <line x1="483.60" y1="317.76" x2="493.68" y2="325.68" stroke="#00e5d0" stroke-opacity=".35" stroke-width=".7"/>
 <line x1="481.46" y1="315.19" x2="493.68" y2="313.68" stroke="#00e5d0" stroke-opacity=".55" stroke-width=".7"/>
 <line x1="483.60" y1="305.76" x2="493.68" y2="313.68" stroke="#00e5d0" stroke-opacity=".35" stroke-width=".7"/>
-<polygon points="471.38,300.87 483.60,299.36 493.68,307.28 481.46,308.79" fill="#00e5d0" stroke="#00e5d0" stroke-width=".65"/>
+<polygon points="471.38,301.65 483.60,300.13 493.68,308.05 481.46,309.57" fill="#00e5d0" stroke="#00e5d0" stroke-width=".65"/>
 </g>
 <g data-date="2026-04-16" data-count="16"><title>2026-04-16: 16 contributions</title>
 <polygon points="580.36,337.69 592.59,336.18 592.59,307.78 580.36,309.29" fill="#00e5d0" fill-opacity=".3" stroke="#00e5d0" stroke-opacity=".55" stroke-width=".55"/>
@@ -2038,12 +2037,12 @@
 <g data-date="2026-03-04" data-count="0"><title>2026-03-04: 0 contributions</title>
 <polygon points="454.40,331.37 466.62,329.86 476.70,337.78 464.48,339.29" fill="#30204e" stroke="#423051" stroke-width=".65"/>
 </g>
-<g data-date="2026-04-09" data-count="8"><title>2026-04-09: 8 contributions</title>
-<polygon points="563.38,339.79 575.61,338.28 575.61,317.02 563.38,318.54" fill="#3a8dff" fill-opacity=".3" stroke="#3a8dff" stroke-opacity=".55" stroke-width=".55"/>
-<polygon points="565.53,330.36 575.61,338.28 575.61,317.02 565.53,309.10" fill="#3a8dff" fill-opacity=".5" stroke="#3a8dff" stroke-opacity=".7" stroke-width=".55"/>
+<g data-date="2026-04-09" data-count="9"><title>2026-04-09: 9 contributions</title>
+<polygon points="563.38,339.79 575.61,338.28 575.61,315.98 563.38,317.49" fill="#3a8dff" fill-opacity=".3" stroke="#3a8dff" stroke-opacity=".55" stroke-width=".55"/>
+<polygon points="565.53,330.36 575.61,338.28 575.61,315.98 565.53,308.06" fill="#3a8dff" fill-opacity=".5" stroke="#3a8dff" stroke-opacity=".7" stroke-width=".55"/>
 <line x1="563.38" y1="329.79" x2="575.61" y2="328.28" stroke="#3a8dff" stroke-opacity=".55" stroke-width=".7"/>
 <line x1="565.53" y1="320.36" x2="575.61" y2="328.28" stroke="#3a8dff" stroke-opacity=".35" stroke-width=".7"/>
-<polygon points="553.30,310.62 565.53,309.10 575.61,317.02 563.38,318.54" fill="#3a8dff" stroke="#3a8dff" stroke-width=".65"/>
+<polygon points="553.30,309.57 565.53,308.06 575.61,315.98 563.38,317.49" fill="#3a8dff" stroke="#3a8dff" stroke-width=".65"/>
 </g>
 <g data-date="2025-11-09" data-count="0"><title>2025-11-09: 0 contributions</title>
 <polygon points="140.70,331.97 152.93,330.46 163.01,338.38 150.78,339.89" fill="#30204e" stroke="#423051" stroke-width=".65"/>
@@ -2062,9 +2061,9 @@
 <g data-date="2025-12-15" data-count="0"><title>2025-12-15: 0 contributions</title>
 <polygon points="239.60,332.47 251.83,330.96 261.91,338.88 249.68,340.39" fill="#30204e" stroke="#423051" stroke-width=".65"/>
 </g>
-<g data-date="2026-06-20" data-count="98"><title>2026-06-20: 98 contributions</title>
-<polygon points="761.19,340.79 773.42,339.28 773.42,274.90 761.19,276.41" fill="#bc78ff" fill-opacity=".3" stroke="#bc78ff" stroke-opacity=".55" stroke-width=".55"/>
-<polygon points="763.34,331.36 773.42,339.28 773.42,274.90 763.34,266.98" fill="#bc78ff" fill-opacity=".5" stroke="#bc78ff" stroke-opacity=".7" stroke-width=".55"/>
+<g data-date="2026-06-20" data-count="97"><title>2026-06-20: 97 contributions</title>
+<polygon points="761.19,340.79 773.42,339.28 773.42,275.20 761.19,276.72" fill="#bc78ff" fill-opacity=".3" stroke="#bc78ff" stroke-opacity=".55" stroke-width=".55"/>
+<polygon points="763.34,331.36 773.42,339.28 773.42,275.20 763.34,267.28" fill="#bc78ff" fill-opacity=".5" stroke="#bc78ff" stroke-opacity=".7" stroke-width=".55"/>
 <line x1="761.19" y1="330.79" x2="773.42" y2="329.28" stroke="#bc78ff" stroke-opacity=".55" stroke-width=".7"/>
 <line x1="763.34" y1="321.36" x2="773.42" y2="329.28" stroke="#bc78ff" stroke-opacity=".35" stroke-width=".7"/>
 <line x1="761.19" y1="318.79" x2="773.42" y2="317.28" stroke="#bc78ff" stroke-opacity=".55" stroke-width=".7"/>
@@ -2075,7 +2074,7 @@
 <line x1="763.34" y1="285.36" x2="773.42" y2="293.28" stroke="#bc78ff" stroke-opacity=".35" stroke-width=".7"/>
 <line x1="761.19" y1="282.79" x2="773.42" y2="281.28" stroke="#bc78ff" stroke-opacity=".55" stroke-width=".7"/>
 <line x1="763.34" y1="273.36" x2="773.42" y2="281.28" stroke="#bc78ff" stroke-opacity=".35" stroke-width=".7"/>
-<polygon points="751.11,268.49 763.34,266.98 773.42,274.90 761.19,276.41" fill="#bc78ff" stroke="#bc78ff" stroke-width=".65"/>
+<polygon points="751.11,268.80 763.34,267.28 773.42,275.20 761.19,276.72" fill="#bc78ff" stroke="#bc78ff" stroke-width=".65"/>
 </g>
 <g data-date="2026-01-20" data-count="0"><title>2026-01-20: 0 contributions</title>
 <polygon points="338.51,332.97 350.74,331.46 360.82,339.38 348.59,340.89" fill="#30204e" stroke="#423051" stroke-width=".65"/>
@@ -2235,14 +2234,14 @@
 <g data-date="2026-03-05" data-count="0"><title>2026-03-05: 0 contributions</title>
 <polygon points="468.40,342.37 480.62,340.86 490.70,348.78 478.48,350.29" fill="#30204e" stroke="#423051" stroke-width=".65"/>
 </g>
-<g data-date="2026-04-10" data-count="13"><title>2026-04-10: 13 contributions</title>
-<polygon points="577.38,350.79 589.61,349.28 589.61,323.28 577.38,324.80" fill="#00e5d0" fill-opacity=".3" stroke="#00e5d0" stroke-opacity=".55" stroke-width=".55"/>
-<polygon points="579.53,341.36 589.61,349.28 589.61,323.28 579.53,315.36" fill="#00e5d0" fill-opacity=".5" stroke="#00e5d0" stroke-opacity=".7" stroke-width=".55"/>
+<g data-date="2026-04-10" data-count="12"><title>2026-04-10: 12 contributions</title>
+<polygon points="577.38,350.79 589.61,349.28 589.61,324.15 577.38,325.66" fill="#00e5d0" fill-opacity=".3" stroke="#00e5d0" stroke-opacity=".55" stroke-width=".55"/>
+<polygon points="579.53,341.36 589.61,349.28 589.61,324.15 579.53,316.23" fill="#00e5d0" fill-opacity=".5" stroke="#00e5d0" stroke-opacity=".7" stroke-width=".55"/>
 <line x1="577.38" y1="340.79" x2="589.61" y2="339.28" stroke="#00e5d0" stroke-opacity=".55" stroke-width=".7"/>
 <line x1="579.53" y1="331.36" x2="589.61" y2="339.28" stroke="#00e5d0" stroke-opacity=".35" stroke-width=".7"/>
 <line x1="577.38" y1="328.79" x2="589.61" y2="327.28" stroke="#00e5d0" stroke-opacity=".55" stroke-width=".7"/>
 <line x1="579.53" y1="319.36" x2="589.61" y2="327.28" stroke="#00e5d0" stroke-opacity=".35" stroke-width=".7"/>
-<polygon points="567.30,316.88 579.53,315.36 589.61,323.28 577.38,324.80" fill="#00e5d0" stroke="#00e5d0" stroke-width=".65"/>
+<polygon points="567.30,317.74 579.53,316.23 589.61,324.15 577.38,325.66" fill="#00e5d0" stroke="#00e5d0" stroke-width=".65"/>
 </g>
 <g data-date="2025-11-10" data-count="0"><title>2025-11-10: 0 contributions</title>
 <polygon points="154.70,342.97 166.93,341.46 177.01,349.38 164.78,350.89" fill="#30204e" stroke="#423051" stroke-width=".65"/>
@@ -2292,12 +2291,12 @@
 <g data-date="2026-01-14" data-count="0"><title>2026-01-14: 0 contributions</title>
 <polygon points="335.53,346.07 347.76,344.56 357.84,352.48 345.61,353.99" fill="#30204e" stroke="#423051" stroke-width=".65"/>
 </g>
-<g data-date="2026-02-19" data-count="6"><title>2026-02-19: 6 contributions</title>
-<polygon points="444.51,354.49 456.74,352.98 456.74,334.04 444.51,335.55" fill="#3a8dff" fill-opacity=".3" stroke="#3a8dff" stroke-opacity=".55" stroke-width=".55"/>
-<polygon points="446.66,345.06 456.74,352.98 456.74,334.04 446.66,326.12" fill="#3a8dff" fill-opacity=".5" stroke="#3a8dff" stroke-opacity=".7" stroke-width=".55"/>
+<g data-date="2026-02-19" data-count="7"><title>2026-02-19: 7 contributions</title>
+<polygon points="444.51,354.49 456.74,352.98 456.74,332.84 444.51,334.35" fill="#3a8dff" fill-opacity=".3" stroke="#3a8dff" stroke-opacity=".55" stroke-width=".55"/>
+<polygon points="446.66,345.06 456.74,352.98 456.74,332.84 446.66,324.92" fill="#3a8dff" fill-opacity=".5" stroke="#3a8dff" stroke-opacity=".7" stroke-width=".55"/>
 <line x1="444.51" y1="344.49" x2="456.74" y2="342.98" stroke="#3a8dff" stroke-opacity=".55" stroke-width=".7"/>
 <line x1="446.66" y1="335.06" x2="456.74" y2="342.98" stroke="#3a8dff" stroke-opacity=".35" stroke-width=".7"/>
-<polygon points="434.43,327.63 446.66,326.12 456.74,334.04 444.51,335.55" fill="#3a8dff" stroke="#3a8dff" stroke-width=".65"/>
+<polygon points="434.43,326.43 446.66,324.92 456.74,332.84 444.51,334.35" fill="#3a8dff" stroke="#3a8dff" stroke-width=".65"/>
 </g>
 <g data-date="2026-03-27" data-count="50"><title>2026-03-27: 50 contributions</title>
 <polygon points="543.42,354.99 555.65,353.48 555.65,306.35 543.42,307.86" fill="#bc78ff" fill-opacity=".3" stroke="#bc78ff" stroke-opacity=".55" stroke-width=".55"/>
@@ -2412,14 +2411,14 @@
 <g data-date="2026-01-15" data-count="0"><title>2026-01-15: 0 contributions</title>
 <polygon points="349.53,357.07 361.76,355.56 371.84,363.48 359.61,364.99" fill="#30204e" stroke="#423051" stroke-width=".65"/>
 </g>
-<g data-date="2026-02-20" data-count="19"><title>2026-02-20: 19 contributions</title>
-<polygon points="458.51,365.49 470.74,363.98 470.74,333.39 458.51,334.90" fill="#00e5d0" fill-opacity=".3" stroke="#00e5d0" stroke-opacity=".55" stroke-width=".55"/>
-<polygon points="460.66,356.06 470.74,363.98 470.74,333.39 460.66,325.47" fill="#00e5d0" fill-opacity=".5" stroke="#00e5d0" stroke-opacity=".7" stroke-width=".55"/>
+<g data-date="2026-02-20" data-count="18"><title>2026-02-20: 18 contributions</title>
+<polygon points="458.51,365.49 470.74,363.98 470.74,334.10 458.51,335.61" fill="#00e5d0" fill-opacity=".3" stroke="#00e5d0" stroke-opacity=".55" stroke-width=".55"/>
+<polygon points="460.66,356.06 470.74,363.98 470.74,334.10 460.66,326.18" fill="#00e5d0" fill-opacity=".5" stroke="#00e5d0" stroke-opacity=".7" stroke-width=".55"/>
 <line x1="458.51" y1="355.49" x2="470.74" y2="353.98" stroke="#00e5d0" stroke-opacity=".55" stroke-width=".7"/>
 <line x1="460.66" y1="346.06" x2="470.74" y2="353.98" stroke="#00e5d0" stroke-opacity=".35" stroke-width=".7"/>
 <line x1="458.51" y1="343.49" x2="470.74" y2="341.98" stroke="#00e5d0" stroke-opacity=".55" stroke-width=".7"/>
 <line x1="460.66" y1="334.06" x2="470.74" y2="341.98" stroke="#00e5d0" stroke-opacity=".35" stroke-width=".7"/>
-<polygon points="448.43,326.98 460.66,325.47 470.74,333.39 458.51,334.90" fill="#00e5d0" stroke="#00e5d0" stroke-width=".65"/>
+<polygon points="448.43,327.69 460.66,326.18 470.74,334.10 458.51,335.61" fill="#00e5d0" stroke="#00e5d0" stroke-width=".65"/>
 </g>
 <g data-date="2026-03-28" data-count="38"><title>2026-03-28: 38 contributions</title>
 <polygon points="557.42,365.99 569.65,364.48 569.65,322.88 557.42,324.39" fill="#00e5d0" fill-opacity=".3" stroke="#00e5d0" stroke-opacity=".55" stroke-width=".55"/>
