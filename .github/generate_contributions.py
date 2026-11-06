@@ -102,7 +102,6 @@ def render(calendar, username):
 
 
 def render_stl(calendar):
-    viewer_scale = 3
     triangles = []
 
     def box(x0, y0, z0, x1, y1, z1):
@@ -113,7 +112,7 @@ def render_stl(calendar):
                  ((0, 1, 0), (2, 3, 7, 6)), ((-1, 0, 0), (3, 0, 4, 7))]
         for normal, corners in faces:
             for indices in [(corners[0], corners[1], corners[2]), (corners[0], corners[2], corners[3])]:
-                points = "\n".join("vertex " + " ".join(f"{value * viewer_scale:g}" for value in vertices[index]) for index in indices)
+                points = "\n".join("vertex " + " ".join(f"{value:g}" for value in vertices[index]) for index in indices)
                 triangles.append(f'facet normal {normal[0]} {normal[1]} {normal[2]}\nouter loop\n{points}\nendloop\nendfacet')
 
     weeks = calendar["weeks"]
