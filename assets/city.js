@@ -145,7 +145,7 @@ async function start() {
     const width = (maxX - minX) / zoom, height = (maxY - minY) / zoom;
     svg.setAttribute('viewBox', `${(minX + maxX - width) / 2} ${(minY + maxY - height) / 2} ${width} ${height}`);
   }
-  function requestDraw() { if (frame === undefined && !host.hidden && !document.getElementById('city-panel').hidden) frame = requestAnimationFrame(draw); }
+  function requestDraw() { if (frame === undefined && !host.hidden) frame = requestAnimationFrame(draw); }
   function clearInertia() {
     if (inertia !== undefined) cancelAnimationFrame(inertia);
     inertia = undefined;
@@ -267,7 +267,7 @@ async function start() {
   reducedMotion.addEventListener('change', () => { clearInertia(); growth = 1; requestDraw(); });
   function grow() {
     if (growthFrame !== undefined) cancelAnimationFrame(growthFrame);
-    if (reducedMotion.matches || document.hidden || document.getElementById('city-panel').hidden) { growth = 1; requestDraw(); return; }
+    if (reducedMotion.matches || document.hidden) { growth = 1; requestDraw(); return; }
     growth = 0;
     const started = performance.now();
     const tick = now => {
@@ -284,10 +284,6 @@ async function start() {
     else requestDraw();
   });
   document.getElementById('reset-view').addEventListener('click', () => { reset(); grow(); });
-  document.addEventListener('viewchange', event => {
-    if (event.detail === '3d') { reset(); grow(); }
-    else { clearInertia(); hideTooltip(); if (growthFrame !== undefined) cancelAnimationFrame(growthFrame); growth = 1; }
-  });
   fallback.hidden = true;
   status.hidden = true;
   stage.dataset.ready = 'true';
@@ -296,29 +292,4 @@ async function start() {
   draw();
 }
 
-function setView(view) {
-  const isSnake = view === 'snake';
-  document.getElementById('city-panel').hidden = isSnake;
-  document.getElementById('snake-panel').hidden = !isSnake;
-  for (const tab of document.querySelectorAll('[data-view]')) {
-    const active = tab.dataset.view === (isSnake ? 'snake' : '3d');
-    tab.setAttribute('aria-selected', String(active));
-    tab.tabIndex = active ? 0 : -1;
-  }
-  document.getElementById('reset-view').hidden = isSnake;
-  history.replaceState(null, '', isSnake ? '#snake' : '#3d');
-  document.dispatchEvent(new CustomEvent('viewchange', { detail: isSnake ? 'snake' : '3d' }));
-}
-for (const tab of document.querySelectorAll('[data-view]')) {
-  tab.addEventListener('click', () => setView(tab.dataset.view));
-  tab.addEventListener('keydown', event => {
-    if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
-    event.preventDefault();
-    const next = event.key === 'Home' ? 'snake' : event.key === 'End' ? '3d' : tab.dataset.view === 'snake' ? '3d' : 'snake';
-    setView(next);
-    document.querySelector(`[data-view="${next}"]`).focus();
-  });
-}
-window.addEventListener('hashchange', () => setView(location.hash === '#snake' ? 'snake' : '3d'));
-setView(location.hash === '#snake' ? 'snake' : '3d');
 start().catch(() => showFallback('The interactive heatmap could not start.'));

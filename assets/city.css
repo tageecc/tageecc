@@ -15,12 +15,7 @@ h1 { font-size: 28px; line-height: 1.2; letter-spacing: -0.6px; margin: 0 0 12px
 #date-range { color: #a3b4c5; font: 12px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
 .back-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 5px; font-size: 12px; text-decoration: none; white-space: nowrap; }
 .back-link svg { stroke: currentColor; stroke-width: 1.5; fill: none; }
-.view-bar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-top: 30px; }
-.view-tabs { display: flex; gap: 3px; border: 1px solid #263440; background: #101820; border-radius: 8px; padding: 4px; }
-.view-tabs button { border: 0; background: transparent; color: #a3b4c5; padding: 8px 18px; border-radius: 5px; font-size: 13px; font-weight: 550; }
-.view-tabs button:hover { color: #e6edf3; }
-.view-tabs button[aria-selected="true"] { color: #6ee7b7; background: #15372d; }
-#activity-total { color: #a3b4c5; font: 12px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-variant-numeric: tabular-nums; }
+#activity-total { margin-top: 30px; color: #a3b4c5; font: 12px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-variant-numeric: tabular-nums; }
 .view-panel { flex: 1; display: flex; flex-direction: column; }
 .city-stage { position: relative; flex: 1; min-height: 420px; margin: 24px 0; }
 .canvas-host { position: absolute; inset: 0; }
@@ -47,8 +42,6 @@ h1 { font-size: 28px; line-height: 1.2; letter-spacing: -0.6px; margin: 0 0 12px
 .accessible-data select { background: #141f28; border: 1px solid #365148; border-radius: 4px; padding: 8px; accent-color: #34d399; }
 .accessible-data p { max-width: 70ch; margin-bottom: 12px; line-height: 1.8; }
 #selected-day { color: #6ee7b7; }
-.snake-stage { display: flex; align-items: center; justify-content: center; flex: 1; min-height: 420px; padding: 50px 0; }
-.snake-stage img { width: 100%; height: auto; }
 .page-notes { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin-top: 20px; font-size: 10px; line-height: 1.8; color: #95a9b8; }
 #reset-view { padding: 4px 0; border: 0; background: transparent; color: #a3b4c5; font-size: 11px; white-space: nowrap; }
 #reset-view:hover { color: #6ee7b7; }
@@ -63,13 +56,11 @@ h1 { font-size: 28px; line-height: 1.2; letter-spacing: -0.6px; margin: 0 0 12px
   h1 { font-size: 24px; }
   #date-range { font-size: 11px; }
   .back-link { margin-top: 0; font-size: 11px; }
-  .view-bar { margin-top: 22px; gap: 12px; }
-  #activity-total { font-size: 11px; }
+  #activity-total { margin-top: 22px; font-size: 11px; }
   .city-stage { min-height: 350px; margin: 22px -6px; }
   .city-footer { display: block; padding-top: 16px; }
   .instructions { font-size: 11px; }
   .legend { margin-top: 16px; gap: 14px; }
   .page-notes { gap: 12px; align-items: flex-end; }
   .page-notes p { max-width: 240px; }
-  .snake-stage { min-height: 350px; }
 }

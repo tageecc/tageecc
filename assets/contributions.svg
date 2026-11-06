@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
 <title id="title">tageecc — 3D contribution activity</title>
-<desc id="desc">6,935 GitHub contributions from 2025-11-02 to 2026-11-06. One solid voxel per day; its height and shade show the activity level. Click to open the interactive view.</desc>
+<desc id="desc">6,935 GitHub contributions from 2025-11-02 to 2026-11-06. One solid voxel per day; its height and shade show the activity level. Static preview.</desc>
 <rect width="1200" height="360" rx="8" fill="#0b1015"/>
 <g fill="#a3b4c5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">
 <text x="36" y="34">tageecc / 2025-11-02 — 2026-11-06</text>
@@ -1858,7 +1858,7 @@
 <path d="M-324.575,66.690 L-335.552,68.108 L-335.552,66.721 L-324.575,65.303 Z" fill="rgb(36,41,47)" stroke="rgb(36,41,47)" stroke-width=".25" stroke-linejoin="round"/>
 </g>
 </g><path d="M36 306 H1164" stroke="#21313b"/>
-<g fill="#a3b4c5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12"><text x="36" y="337">Click to rotate &amp; explore · One block = one day</text>
+<g fill="#a3b4c5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12"><text x="36" y="337">One block = one day · Height = activity level</text>
 <rect x="704" y="325" width="11" height="11" rx="2" fill="#2d333b"/><text x="722" y="336">0</text>
 <rect x="798" y="325" width="11" height="11" rx="2" fill="#065f46"/><text x="816" y="336">1–10</text>
 <rect x="892" y="325" width="11" height="11" rx="2" fill="#059669"/><text x="910" y="336">11–40</text>

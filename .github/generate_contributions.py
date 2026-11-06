@@ -47,7 +47,7 @@ def render(calendar, username):
     active = sum(day["contributionCount"] > 0 for day in days)
     svg = [f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
 <title id="title">{escape(username)} — 3D contribution activity</title>
-<desc id="desc">{calendar["totalContributions"]:,} GitHub contributions from {days[0]["date"]} to {days[-1]["date"]}. One solid voxel per day; its height and shade show the activity level. Click to open the interactive view.</desc>
+<desc id="desc">{calendar["totalContributions"]:,} GitHub contributions from {days[0]["date"]} to {days[-1]["date"]}. One solid voxel per day; its height and shade show the activity level. Static preview.</desc>
 <rect width="1200" height="360" rx="8" fill="#0b1015"/>
 <g fill="#a3b4c5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">
 <text x="36" y="34">{escape(username)} / {days[0]["date"]} — {days[-1]["date"]}</text>
@@ -66,7 +66,7 @@ def render(calendar, username):
             svg.append(f'<path d="{path}" fill="{color}" stroke="{color}" stroke-width=".25" stroke-linejoin="round"/>')
         svg.append('</g>')
     svg.append('</g><path d="M36 306 H1164" stroke="#21313b"/>')
-    svg.append('<g fill="#a3b4c5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12"><text x="36" y="337">Click to rotate &amp; explore · One block = one day</text>')
+    svg.append('<g fill="#a3b4c5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12"><text x="36" y="337">One block = one day · Height = activity level</text>')
     for index, label in enumerate(["0", "1–10", "11–40", "41–120", "121+"]):
         x = 704 + index * 94
         svg.append(f'<rect x="{x}" y="325" width="11" height="11" rx="2" fill="{COLORS[index]}"/><text x="{x + 18}" y="336">{label}</text>')
