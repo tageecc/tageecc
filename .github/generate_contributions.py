@@ -82,11 +82,12 @@ def render_stl(calendar):
                if day["contributionCount"] > 40}
 
     def number(value):
-        return f"{value:.5f}".rstrip("0").rstrip(".") if value else "0"
+        formatted = f"{value:.5f}".rstrip("0").rstrip(".") if value else "0"
+        return formatted.replace("-0.", "-.") if formatted.startswith("-0.") else formatted[1:] if formatted.startswith("0.") else formatted
 
     def triangle(a, b, c):
-        # Bake a diagonal orientation because the native viewer fixes its initial camera.
-        a, b, c = [(4*x - 3*y, 3*x + 4*y, 5*z) for x, y, z in (a, b, c)]
+        # Small units keep the native viewer's fixed-spacing grid from becoming a dense black plane.
+        a, b, c = [((4*x - 3*y) / 10, (3*x + 4*y) / 10, z / 2) for x, y, z in (a, b, c)]
         u, v = [b[i] - a[i] for i in range(3)], [c[i] - a[i] for i in range(3)]
         normal = (u[1] * v[2] - u[2] * v[1], u[2] * v[0] - u[0] * v[2], u[0] * v[1] - u[1] * v[0])
         length = math.sqrt(sum(value * value for value in normal))
