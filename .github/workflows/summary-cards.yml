@@ -1,0 +1,59 @@
+name: Profile Visuals
+
+on:
+  schedule:
+    - cron: "17 1 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/summary-cards.yml
+      - .github/generate_contributions.py
+      - README.md
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-visuals
+  cancel-in-progress: false
+
+jobs:
+  visuals:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate 3D contribution city
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PROFILE_USERNAME: ${{ github.repository_owner }}
+        run: |
+          gh api graphql \
+            -f query='query($login: String!) { user(login: $login) { contributionsCollection { contributionCalendar { totalContributions weeks { contributionDays { date contributionCount } } } } } }' \
+            -f login="$PROFILE_USERNAME" \
+            --jq '.data.user.contributionsCollection.contributionCalendar' \
+            | python3 .github/generate_contributions.py --username "$PROFILE_USERNAME" --output assets/contributions.svg --stl-output assets/contributions.stl --readme README.md
+
+      - uses: vn7n24fzkq/github-profile-summary-cards@7022eb6bd48de38b092f54110a8ff8185f2ac4a1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          USERNAME: ${{ github.repository_owner }}
+          BRANCH_NAME: main
+          TIME_ZONE: Asia/Shanghai
+          THEME: tokyonight
+          AUTO_PUSH: false
+
+      - name: Save generated images
+        shell: bash
+        run: |
+          git add README.md assets/contributions.svg assets/contributions.stl profile-summary-card-output
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m "Refresh profile visuals"
+          git pull --rebase origin main
+          git push

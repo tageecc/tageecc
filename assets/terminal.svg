@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="420" viewBox="0 0 1000 420" role="img" aria-labelledby="terminal-title">
+  <title id="terminal-title">About tagee: full-stack developer building AI agent tooling</title>
+  <defs>
+    <linearGradient id="border"><stop stop-color="#ff53aa"/><stop offset="1" stop-color="#00e5d0"/></linearGradient>
+    <clipPath id="type1"><rect x="78" y="70" width="70" height="26"><animate attributeName="width" from="0" to="70" begin=".2s" dur=".6s" fill="freeze"/></rect></clipPath>
+    <clipPath id="type2"><rect x="78" y="118" width="160" height="26"><animate attributeName="width" from="0" to="160" begin="1.4s" dur=".8s" fill="freeze"/></rect></clipPath>
+    <clipPath id="type3"><rect x="78" y="262" width="260" height="26"><animate attributeName="width" from="0" to="260" begin="3.8s" dur=".9s" fill="freeze"/></rect></clipPath>
+    <clipPath id="type4"><rect x="78" y="310" width="130" height="26"><animate attributeName="width" from="0" to="130" begin="5.2s" dur=".6s" fill="freeze"/></rect></clipPath>
+    <style>
+      text { font: 16px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #e2d5f3; white-space: pre; }
+      .p { fill: #ff53aa; font-weight: 700; }
+      .d { fill: #00e5d0; font-weight: 700; }
+      .k { fill: #ffcb6b; }
+      .s { fill: #a5ff90; }
+      .m { fill: #bba6d1; }
+      .h { fill: #e5b8ff; font-weight: 700; }
+      .title { font-size: 13px; fill: #bba6d1; }
+      .line { animation: appear .15s var(--at, 0s) backwards; }
+      .cursor { animation: blink 1.2s infinite steps(1); }
+      @keyframes appear { from { opacity: 0; } to { opacity: 1; } }
+      @keyframes blink { 50% { opacity: 0; } }
+      @media (prefers-reduced-motion: reduce) { .line, .cursor { animation: none; } text { clip-path: none; } }
+    </style>
+  </defs>
+  <rect x="5" y="5" width="990" height="410" rx="10" fill="#0d0619" stroke="url(#border)" stroke-width="1.5"/>
+  <path d="M6 46 H994" stroke="#38224c"/>
+  <circle cx="34" cy="26" r="6" fill="#ff5f56"/>
+  <circle cx="56" cy="26" r="6" fill="#ffbd2e"/>
+  <circle cx="78" cy="26" r="6" fill="#27c93f"/>
+  <text class="title" x="500" y="31" text-anchor="middle">tagee@github: ~ — zsh</text>
+
+  <text x="32" y="88"><tspan class="p">$</tspan>  <tspan class="d">~</tspan></text>
+  <text class="line" style="--at: .2s" x="78" y="88" clip-path="url(#type1)">whoami</text>
+  <text class="line" style="--at: .9s" x="32" y="112"><tspan class="h">tagee</tspan> <tspan class="m">·</tspan> full-stack developer <tspan class="m">·</tspan> building AI agent tooling</text>
+
+  <text class="line" style="--at: 1.2s" x="32" y="136"><tspan class="p">$</tspan>  <tspan class="d">~</tspan></text>
+  <text class="line" style="--at: 1.4s" x="78" y="136" clip-path="url(#type2)">cat skills.json</text>
+  <g class="line" style="--at: 2.3s">
+    <text x="32" y="160" class="m">{</text>
+    <text x="32" y="184">  <tspan class="k">"languages"</tspan>: [<tspan class="s">"TypeScript"</tspan>, <tspan class="s">"JavaScript"</tspan>, <tspan class="s">"Python"</tspan>, <tspan class="s">"Go"</tspan>, <tspan class="s">"Java"</tspan>],</text>
+    <text x="32" y="208">  <tspan class="k">"stack"</tspan>:     [<tspan class="s">"React"</tspan>, <tspan class="s">"Node.js"</tspan>, <tspan class="s">"Tauri"</tspan>, <tspan class="s">"Three.js"</tspan>],</text>
+    <text x="32" y="232">  <tspan class="k">"focus"</tspan>:     [<tspan class="s">"AI agent tooling"</tspan>, <tspan class="s">"developer productivity"</tspan>, <tspan class="s">"desktop apps"</tspan>]</text>
+    <text x="32" y="256" class="m">}</text>
+  </g>
+
+  <text class="line" style="--at: 3.6s" x="32" y="280"><tspan class="p">$</tspan>  <tspan class="d">~</tspan></text>
+  <text class="line" style="--at: 3.8s" x="78" y="280" clip-path="url(#type3)">ls ~/projects --sort=hot</text>
+  <text class="line" style="--at: 4.8s" x="32" y="304"><tspan class="d">cursor-agent-api-proxy</tspan>  <tspan class="h">clawteam</tspan>  <tspan class="s">circle</tspan>  <tspan class="k">clipture</tspan>  <tspan class="p">droidlume</tspan>  reality-tear</text>
+
+  <text class="line" style="--at: 5s" x="32" y="328"><tspan class="p">$</tspan>  <tspan class="d">~</tspan></text>
+  <text class="line" style="--at: 5.2s" x="78" y="328" clip-path="url(#type4)">echo $MOTTO</text>
+  <text class="line s" style="--at: 6s" x="32" y="352">Build tools that make developers faster.</text>
+  <text class="line" style="--at: 6.4s" x="32" y="380"><tspan class="p">$</tspan>  <tspan class="d">~</tspan> <tspan class="cursor" fill="#ff53aa">_</tspan></text>
+</svg>

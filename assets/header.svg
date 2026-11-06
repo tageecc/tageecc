@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-labelledby="header-title">
+  <title id="header-title">TAGEE — full-stack developer, AI agent tooling</title>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#05010f"/>
+      <stop offset="55%" stop-color="#1a0536"/>
+      <stop offset="100%" stop-color="#5b0f5e"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffe259"/>
+      <stop offset="45%" stop-color="#ff8a3d"/>
+      <stop offset="100%" stop-color="#ff2e97"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#14002b"/>
+      <stop offset="100%" stop-color="#05010f"/>
+    </linearGradient>
+    <linearGradient id="fadeTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#000" stop-opacity="1"/>
+      <stop offset="35%" stop-color="#000" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="sunMask">
+      <rect width="1200" height="340" fill="#fff"/>
+      <rect x="700" y="132" width="360" height="3" fill="#000"/>
+      <rect x="700" y="148" width="360" height="5" fill="#000"/>
+      <rect x="700" y="166" width="360" height="7" fill="#000"/>
+      <rect x="700" y="186" width="360" height="9" fill="#000"/>
+      <rect x="0" y="230" width="1200" height="110" fill="#000"/>
+    </mask>
+    <filter id="glow" x="-20%" y="-40%" width="140%" height="180%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="bigGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1" fill="#000" fill-opacity="0.28"/>
+    </pattern>
+    <clipPath id="floorClip"><rect x="0" y="230" width="1200" height="110"/></clipPath>
+    <g id="wordmark" transform="translate(90 168) scale(0.104 -0.104)">
+      <path transform="translate(0 0)" d="M302 0V564H20V720H740V564H458V0Z"/>
+      <path transform="translate(824 0)" d="M58 0V572Q58 612.5 78.0 646.25Q98 680 131.75 700.0Q165.5 720 206 720H629Q669.5 720 703.25 700.0Q737 680 757.5 646.25Q778 612.5 778 572V0H621V232H213V0H58ZM213 388H621V564Q621 564 621.0 564.0Q621 564 621 564H213Q213 564 213.0 564.0Q213 564 213 564V388Z"/>
+      <path transform="translate(1725 0)" d="M204 0Q163.5 0 129.75 20.0Q96 40 76.0 73.75Q56 107.5 56 148V572Q56 612.5 76.0 646.25Q96 680 129.75 700.0Q163.5 720 204 720H627Q667.5 720 701.25 700.0Q735 680 755.5 646.25Q776 612.5 776 572V504H619V564Q619 564 619.0 564.0Q619 564 619 564H211Q211 564 211.0 564.0Q211 564 211 564V156Q211 156 211.0 156.0Q211 156 211 156H619Q619 156 619.0 156.0Q619 156 619 156V264H463V420H776V148Q776 107.5 755.5 73.75Q735 40 701.25 20.0Q667.5 0 627 0Z"/>
+      <path transform="translate(2620 0)" d="M58 0V720H723V564H215V438H624V282H215V156H723V0Z"/>
+      <path transform="translate(3451 0)" d="M58 0V720H723V564H215V438H624V282H215V156H723V0Z"/>
+    </g>
+    <style>
+      .sub { font: 600 22px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #e0e7ff; letter-spacing: 1px; }
+      .c { fill: #00f0ff; opacity: .85; animation: gc 3s infinite steps(1); }
+      .m { fill: #ff2e97; opacity: .85; animation: gm 3s infinite steps(1); }
+      .w { fill: #ffffff; animation: gw 3s infinite steps(1); }
+      @keyframes gc { 0%,100% { transform: translate(-3px,0); } 84% { transform: translate(-12px,3px); } 87% { transform: translate(8px,-2px); } 90% { transform: translate(-5px,1px); } 93% { transform: translate(-3px,0); } }
+      @keyframes gm { 0%,100% { transform: translate(3px,0); } 84% { transform: translate(12px,-3px); } 87% { transform: translate(-8px,2px); } 90% { transform: translate(5px,-1px); } 93% { transform: translate(3px,0); } }
+      @keyframes gw { 0%,100% { transform: translate(0,0); opacity: 1; } 85% { transform: translate(4px,0); opacity: .8; } 88% { transform: translate(-3px,0); opacity: 1; } 91% { transform: translate(0,0); } }
+      .cursor { animation: blink 1s infinite steps(1); }
+      @keyframes blink { 50% { opacity: 0; } }
+      .star { fill: #fff; animation: tw 3s ease-in-out infinite; }
+      @keyframes tw { 0%,100% { opacity: .15; } 50% { opacity: 1; } }
+      .sunpulse { animation: sp 4s ease-in-out infinite; transform-origin: 880px 230px; }
+      @keyframes sp { 0%,100% { opacity: .55; } 50% { opacity: .9; } }
+      .grid-row { animation: grid-row 2.4s cubic-bezier(.55,0,1,.6) infinite; }
+      @keyframes grid-row { from { transform: translateY(0); } to { transform: translateY(112px); } }
+      @media (prefers-reduced-motion: reduce) { .c, .m, .w, .cursor, .star, .sunpulse, .grid-row { animation: none; } .c, .m { opacity: 0; } }
+    </style>
+  </defs>
+
+  <rect width="1200" height="340" fill="url(#sky)"/>
+
+  <g>
+    <circle class="star" cx="60" cy="40" r="1.4"/>
+    <circle class="star" cx="180" cy="22" r="1.1" style="animation-delay:.7s"/>
+    <circle class="star" cx="330" cy="58" r="1.6" style="animation-delay:1.4s"/>
+    <circle class="star" cx="520" cy="30" r="1.2" style="animation-delay:.3s"/>
+    <circle class="star" cx="640" cy="80" r="1" style="animation-delay:2.2s"/>
+    <circle class="star" cx="740" cy="26" r="1.5" style="animation-delay:1.1s"/>
+    <circle class="star" cx="1010" cy="44" r="1.3" style="animation-delay:.5s"/>
+    <circle class="star" cx="1130" cy="20" r="1.7" style="animation-delay:1.9s"/>
+    <circle class="star" cx="1160" cy="110" r="1.1" style="animation-delay:2.6s"/>
+    <circle class="star" cx="440" cy="120" r="1" style="animation-delay:1.6s"/>
+  </g>
+
+  <circle class="sunpulse" cx="880" cy="230" r="150" fill="#ff2e97" filter="url(#bigGlow)"/>
+  <circle cx="880" cy="230" r="125" fill="url(#sun)" mask="url(#sunMask)"/>
+
+  <path d="M640 230 L700 196 L742 214 L800 172 L850 206 L905 180 L958 212 L1010 186 L1070 218 L1120 200 L1200 230 Z" fill="#0b0120" stroke="#00f0ff" stroke-width="1.5" stroke-opacity=".8" filter="url(#glow)"/>
+  <path d="M0 230 L60 210 L120 222 L190 198 L250 220 L320 206 L380 230 Z" fill="#0b0120" stroke="#a855f7" stroke-width="1.2" stroke-opacity=".6"/>
+
+  <rect x="0" y="230" width="1200" height="110" fill="url(#floor)"/>
+  <g clip-path="url(#floorClip)" stroke="#ff2e97" stroke-width="1.6" filter="url(#glow)">
+    <g stroke-opacity=".9">
+      <line x1="600" y1="230" x2="-1500" y2="340"/>
+      <line x1="600" y1="230" x2="-1080" y2="340"/>
+      <line x1="600" y1="230" x2="-720" y2="340"/>
+      <line x1="600" y1="230" x2="-420" y2="340"/>
+      <line x1="600" y1="230" x2="-160" y2="340"/>
+      <line x1="600" y1="230" x2="80" y2="340"/>
+      <line x1="600" y1="230" x2="300" y2="340"/>
+      <line x1="600" y1="230" x2="500" y2="340"/>
+      <line x1="600" y1="230" x2="700" y2="340"/>
+      <line x1="600" y1="230" x2="900" y2="340"/>
+      <line x1="600" y1="230" x2="1120" y2="340"/>
+      <line x1="600" y1="230" x2="1360" y2="340"/>
+      <line x1="600" y1="230" x2="1620" y2="340"/>
+      <line x1="600" y1="230" x2="1920" y2="340"/>
+      <line x1="600" y1="230" x2="2280" y2="340"/>
+      <line x1="600" y1="230" x2="2700" y2="340"/>
+    </g>
+    <line x1="0" y1="230" x2="1200" y2="230" stroke="#ff8ad1" stroke-width="2"/>
+    <g>
+      <line class="grid-row" x1="0" x2="1200" y1="230" y2="230"/>
+      <line class="grid-row" x1="0" x2="1200" y1="230" y2="230" style="animation-delay: -.6s"/>
+      <line class="grid-row" x1="0" x2="1200" y1="230" y2="230" style="animation-delay: -1.2s"/>
+      <line class="grid-row" x1="0" x2="1200" y1="230" y2="230" style="animation-delay: -1.8s"/>
+    </g>
+  </g>
+  <rect x="0" y="230" width="1200" height="110" fill="url(#fadeTop)" opacity=".85"/>
+
+  <g>
+    <use class="c" href="#wordmark"/>
+    <use class="m" href="#wordmark"/>
+    <use class="w" href="#wordmark" filter="url(#glow)"/>
+  </g>
+  <text class="sub" x="96" y="210">&gt; full-stack dev · ai agent tooling<tspan class="cursor" fill="#ff2e97">_</tspan></text>
+
+  <rect width="1200" height="340" fill="url(#scan)" pointer-events="none"/>
+</svg>
