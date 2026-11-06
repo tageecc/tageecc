@@ -74,16 +74,84 @@ def render(calendar, username):
     return "\n".join(svg) + "\n"
 
 
+def render_stl(calendar):
+    facets = []
+    days = [day for week in calendar["weeks"] for day in week["contributionDays"]]
+    # Limit beveled peaks to keep the inline model within GitHub's README size budget.
+    beveled = {day["date"] for day in sorted(days, key=lambda day: day["contributionCount"], reverse=True)[:8]
+               if day["contributionCount"] > 40}
+
+    def number(value):
+        return f"{value:.5f}".rstrip("0").rstrip(".") if value else "0"
+
+    def triangle(a, b, c):
+        # Bake a diagonal orientation because the native viewer fixes its initial camera.
+        a, b, c = [(4*x - 3*y, 3*x + 4*y, 5*z) for x, y, z in (a, b, c)]
+        u, v = [b[i] - a[i] for i in range(3)], [c[i] - a[i] for i in range(3)]
+        normal = (u[1] * v[2] - u[2] * v[1], u[2] * v[0] - u[0] * v[2], u[0] * v[1] - u[1] * v[0])
+        length = math.sqrt(sum(value * value for value in normal))
+        direction = " ".join(number(value / length) for value in normal)
+        vertices = "\n".join("vertex " + " ".join(number(value) for value in point) for point in (a, b, c))
+        facets.append(f"facet normal {direction}\nouter loop\n{vertices}\nendloop\nendfacet")
+
+    def quad(a, b, c, d):
+        triangle(a, b, c)
+        triangle(a, c, d)
+
+    for column, week in enumerate(calendar["weeks"]):
+        for day in week["contributionDays"]:
+            row = (date.fromisoformat(day["date"]).weekday() + 1) % 7
+            count = day["contributionCount"]
+            level = 0 if count == 0 else 1 if count <= 10 else 2 if count <= 40 else 3 if count <= 120 else 4
+            height = max(2, level * 10)
+            x, y = column * 14, (6 - row) * 14
+            profiles = [(0, 6), (height - 1, 6), (height, 5)] if day["date"] in beveled else [(0, 6), (height, 6)]
+            rings = [[(x - half, y - half, z), (x + half, y - half, z),
+                      (x + half, y + half, z), (x - half, y + half, z)] for z, half in profiles]
+            quad(*reversed(rings[0]))
+            for bottom, top in zip(rings, rings[1:]):
+                for index in range(4):
+                    following = (index + 1) % 4
+                    quad(bottom[index], bottom[following], top[following], top[index])
+            quad(*rings[-1])
+    return "solid contribution_heatmap\n" + "\n".join(facets) + "\nendsolid contribution_heatmap\n"
+
+
+def embed_stl(readme, stl):
+    start, end = "<!-- contribution-stl:start -->", "<!-- contribution-stl:end -->"
+    if readme.count(start) != 1 or readme.count(end) != 1:
+        raise ValueError("README must contain exactly one contribution-stl marker pair")
+    before, _, remaining = readme.partition(start)
+    _, separator, after = remaining.partition(end)
+    if not separator:
+        raise ValueError("Contribution-stl markers are out of order")
+    updated = f"{before}{start}\n\n```stl\n{stl}```\n\n{end}{after}"
+    if len(updated.encode("utf-8")) > 498 * 1024:
+        raise ValueError("Generated README exceeds the 498 KiB safety budget")
+    return updated
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--username", required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--json-output", type=Path, required=True)
+    parser.add_argument("--stl-output", type=Path)
+    parser.add_argument("--readme", type=Path)
     args = parser.parse_args()
+    if args.readme and not args.stl_output:
+        parser.error("--readme requires --stl-output")
     calendar = json.load(sys.stdin)
     svg = render(calendar, args.username)
     data = json.dumps({"username": args.username, **calendar}, separators=(",", ":")) + "\n"
+    stl = render_stl(calendar) if args.stl_output else None
+    readme = embed_stl(args.readme.read_text(encoding="utf-8"), stl) if args.readme else None
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.json_output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(svg, encoding="utf-8")
     args.json_output.write_text(data, encoding="utf-8")
+    if args.stl_output:
+        args.stl_output.parent.mkdir(parents=True, exist_ok=True)
+        args.stl_output.write_text(stl, encoding="ascii")
+    if args.readme:
+        args.readme.write_text(readme, encoding="utf-8")
