@@ -10,9 +10,11 @@ on:
       - .github/workflows/summary-cards.yml
       - .github/generate_contributions.py
       - README.md
+      - index.html
+      - assets/**
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: profile-visuals
@@ -22,10 +24,12 @@ jobs:
   visuals:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
 
-      - name: Generate 3D contribution city
+      - name: Generate contribution image and interactive data
         shell: bash
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -35,7 +39,7 @@ jobs:
             -f query='query($login: String!) { user(login: $login) { contributionsCollection { contributionCalendar { totalContributions weeks { contributionDays { date contributionCount } } } } } }' \
             -f login="$PROFILE_USERNAME" \
             --jq '.data.user.contributionsCollection.contributionCalendar' \
-            | python3 .github/generate_contributions.py --username "$PROFILE_USERNAME" --output assets/contributions.svg --stl-output assets/contributions.stl --readme README.md
+            | python3 .github/generate_contributions.py --username "$PROFILE_USERNAME" --output assets/contributions.svg --json-output assets/contributions.json
 
       - uses: vn7n24fzkq/github-profile-summary-cards@7022eb6bd48de38b092f54110a8ff8185f2ac4a1
         env:
@@ -47,13 +51,40 @@ jobs:
           THEME: tokyonight
           AUTO_PUSH: false
 
-      - name: Save generated images
+      - name: Save generated visuals
         shell: bash
         run: |
-          git add README.md assets/contributions.svg assets/contributions.stl profile-summary-card-output
+          git add assets/contributions.svg assets/contributions.json profile-summary-card-output
           if git diff --cached --quiet; then
             exit 0
           fi
           git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m "Refresh profile visuals"
           git pull --rebase origin main
           git push
+
+      - name: Prepare interactive site
+        shell: bash
+        run: |
+          mkdir -p "$RUNNER_TEMP/contribution-city"
+          cp index.html "$RUNNER_TEMP/contribution-city/"
+          cp -R assets "$RUNNER_TEMP/contribution-city/assets"
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ runner.temp }}/contribution-city
+
+  deploy:
+    needs: visuals
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
+      - name: Deploy interactive city
+        id: deployment
+        uses: actions/deploy-pages@v4

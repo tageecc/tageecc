@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1015">
+  <meta name="description" content="Explore tageecc's real GitHub activity as a contribution snake or an interactive 3D voxel heatmap.">
+  <title>The contribution loop · tageecc</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%230b1015' d='M0 0h32v32H0z'/%3E%3Cpath fill='%2334d399' d='M5 15h6v12H5zM13 5h6v22h-6zM21 11h6v16h-6z'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./assets/city.css">
+</head>
+<body>
+  <main class="city-shell">
+    <header class="city-header">
+      <div>
+        <h1>The contribution loop</h1>
+        <p id="date-range">tageecc / a rolling year of GitHub activity</p>
+      </div>
+      <a href="https://github.com/tageecc" class="back-link"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="m10 5-7 7 7 7M3 12h18"/></svg>GitHub profile</a>
+    </header>
+    <div class="view-bar">
+      <div class="view-tabs" role="tablist" aria-label="Contribution visualization">
+        <button type="button" id="snake-tab" role="tab" aria-selected="false" aria-controls="snake-panel" data-view="snake" tabindex="-1">Snake</button>
+        <button type="button" id="city-tab" role="tab" aria-selected="true" aria-controls="city-panel" data-view="3d">3D activity</button>
+      </div>
+      <p id="activity-total"></p>
+    </div>
+    <section id="city-panel" class="view-panel" role="tabpanel" aria-labelledby="city-tab">
+      <div class="city-stage" id="city-stage">
+        <img class="fallback" id="fallback" src="./assets/contributions.svg" alt="Static 3D voxel heatmap of tageecc's daily GitHub contributions.">
+        <div class="canvas-host" id="canvas-host"></div>
+        <div class="tooltip" id="tooltip" role="status" hidden><strong id="tooltip-date"></strong><span id="tooltip-count"></span></div>
+        <p class="load-status" id="load-status" role="status">Loading daily activity…</p>
+      </div>
+      <footer class="city-footer">
+        <div class="instructions">
+          <p id="interaction-hint">Drag to rotate · Scroll / pinch to zoom · Hover / tap a block</p>
+          <p class="detail">One block = one day · Height = activity level · Updated daily</p>
+        </div>
+        <ul class="legend" aria-label="Daily contribution counts">
+          <li><i style="--tier: #2d333b"></i>0</li>
+          <li><i style="--tier: #065f46"></i>1–10</li>
+          <li><i style="--tier: #059669"></i>11–40</li>
+          <li><i style="--tier: #10b981"></i>41–120</li>
+          <li><i style="--tier: #34d399"></i>121+</li>
+        </ul>
+      </footer>
+      <p class="sr-only" id="keyboard-help">Use arrow keys to rotate, plus and minus to zoom, and Home to reset. Select a date below to inspect its block.</p>
+      <details class="accessible-data">
+        <summary>Explore daily activity by date</summary>
+        <label for="day-select">Date</label>
+        <select id="day-select" disabled><option>Loading dates…</option></select>
+        <p id="selected-day" role="status"></p>
+        <p>Counts include commits, pull requests, reviews and issues, not just commits.</p>
+      </details>
+    </section>
+    <section id="snake-panel" class="view-panel" role="tabpanel" aria-labelledby="snake-tab" hidden>
+      <div class="snake-stage">
+        <img src="https://raw.githubusercontent.com/tageecc/tageecc/output/github-snake-dark.svg" alt="Animated snake eating tageecc's contribution grid." id="snake-image">
+      </div>
+      <footer class="city-footer"><p class="instructions">A year of contributions, one loop at a time. Updated daily.</p></footer>
+    </section>
+    <div class="page-notes">
+      <p>3D rendering adapted from <a href="https://github.com/xiufengsun/TokenTracker">TokenTracker</a> · <a href="./assets/TokenTracker-LICENSE.txt">MIT license</a></p>
+      <button type="button" id="reset-view">Reset view</button>
+    </div>
+  </main>
+  <noscript><style>#load-status, #interaction-hint, .accessible-data, .view-tabs, #reset-view { display: none; }</style><p class="script-notice">JavaScript is off. The static preview is shown; enable JavaScript to rotate and switch views.</p></noscript>
+  <script type="module">
+    import('./assets/city.js').catch(() => {
+      document.getElementById('load-status').textContent = 'The interactive viewer could not load. The static preview is shown. Reload to try again.';
+      document.getElementById('interaction-hint').textContent = 'Static preview · Reload to try the interactive view';
+    });
+  </script>
+</body>
+</html>
