@@ -87,7 +87,8 @@ def render_stl(calendar):
 
     def triangle(a, b, c):
         # Small units keep the native viewer's fixed-spacing grid from becoming a dense black plane.
-        a, b, c = [((4*x - 3*y) / 10, (3*x + 4*y) / 10, z / 2) for x, y, z in (a, b, c)]
+        # Origin offsets shorten ASCII coordinates; the native viewer recenters XY.
+        a, b, c = [((4*x - 3*y) / 20 - 10, (3*x + 4*y) / 20 - 20, z / 4) for x, y, z in (a, b, c)]
         u, v = [b[i] - a[i] for i in range(3)], [c[i] - a[i] for i in range(3)]
         normal = (u[1] * v[2] - u[2] * v[1], u[2] * v[0] - u[0] * v[2], u[0] * v[1] - u[1] * v[0])
         length = math.sqrt(sum(value * value for value in normal))
