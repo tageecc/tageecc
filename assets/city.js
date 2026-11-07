@@ -4,6 +4,8 @@ const fallback = document.getElementById('fallback');
 const status = document.getElementById('load-status');
 const tooltip = document.getElementById('tooltip');
 const daySelect = document.getElementById('day-select');
+const dailyDetails = daySelect.closest('details');
+const rotationButton = document.getElementById('toggle-rotation');
 const number = new Intl.NumberFormat('en-US');
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 const colors = ['#2d333b', '#065f46', '#059669', '#10b981', '#34d399'];
@@ -57,13 +59,12 @@ function showFallback(message) {
   tooltip.hidden = true;
   status.hidden = false;
   status.textContent = `${message} The static preview is shown. Reload to try again.`;
-  document.getElementById('interaction-hint').textContent = 'Static preview · Reload to try the interactive view';
 }
 
 async function start() {
   let data;
   try {
-    const response = await fetch('./assets/contributions.json', { signal: AbortSignal.timeout(12000) });
+    const response = await fetch('./assets/contributions.json', { cache: 'no-cache', signal: AbortSignal.timeout(12000) });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     data = validateCalendar(await response.json());
   } catch {
@@ -74,7 +75,6 @@ async function start() {
     const count = day.contributionCount;
     return { ...day, week: index, weekday: new Date(`${day.date}T00:00:00Z`).getUTCDay(), level: count === 0 ? 0 : count <= 10 ? 1 : count <= 40 ? 2 : count <= 120 ? 3 : 4 };
   }));
-  document.getElementById('date-range').textContent = `${data.username} / ${days[0].date} — ${days.at(-1).date}`;
   document.getElementById('activity-total').textContent = `${number.format(data.totalContributions)} contributions · ${days.filter(day => day.contributionCount > 0).length} active days`;
   daySelect.replaceChildren(...days.map(day => new Option(`${day.date} · ${number.format(day.contributionCount)}`, day.date)));
   daySelect.disabled = false;
@@ -100,6 +100,8 @@ async function start() {
   }
   let yaw = -0.2, pitch = 0.88, zoom = 1, growth = reducedMotion.matches ? 1 : 0;
   let frame, inertia, growthFrame, selected;
+  let rotationFrame, rotationTimer, lastRotationTime;
+  let rotationEnabled = !reducedMotion.matches, inView = false;
   let velocity = { x: 0, y: 0 };
   let lastMove;
   const pointers = new Map();
@@ -146,6 +148,39 @@ async function start() {
     svg.setAttribute('viewBox', `${(minX + maxX - width) / 2} ${(minY + maxY - height) / 2} ${width} ${height}`);
   }
   function requestDraw() { if (frame === undefined && !host.hidden) frame = requestAnimationFrame(draw); }
+  function stopRotation() {
+    if (rotationFrame !== undefined) cancelAnimationFrame(rotationFrame);
+    clearTimeout(rotationTimer);
+    rotationFrame = undefined;
+    rotationTimer = undefined;
+    lastRotationTime = undefined;
+  }
+  function canRotate() {
+    return rotationEnabled && !reducedMotion.matches && !document.hidden && inView && !host.hidden && !pointers.size && inertia === undefined && growthFrame === undefined && !selected && !dailyDetails.open && !svg.matches(':focus-visible');
+  }
+  function resumeRotation(delay = 5000) {
+    stopRotation();
+    if (!canRotate()) return;
+    if (delay) { rotationTimer = setTimeout(() => resumeRotation(0), delay); return; }
+    const tick = now => {
+      if (!canRotate()) { stopRotation(); return; }
+      if (lastRotationTime === undefined) lastRotationTime = now;
+      const elapsed = now - lastRotationTime;
+      if (elapsed >= 1000 / 30) {
+        yaw -= Math.min(elapsed, 100) * 0.000045;
+        lastRotationTime = now;
+        requestDraw();
+      }
+      rotationFrame = requestAnimationFrame(tick);
+    };
+    rotationFrame = requestAnimationFrame(tick);
+  }
+  function updateRotationButton() {
+    rotationButton.disabled = reducedMotion.matches;
+    rotationButton.setAttribute('aria-pressed', String(rotationEnabled));
+    rotationButton.textContent = reducedMotion.matches ? 'Auto-rotation off' : rotationEnabled ? 'Pause rotation' : 'Resume rotation';
+    rotationButton.title = reducedMotion.matches ? 'Auto-rotation is off because reduced motion is enabled.' : 'Auto-rotation pauses while inspecting or interacting.';
+  }
   function clearInertia() {
     if (inertia !== undefined) cancelAnimationFrame(inertia);
     inertia = undefined;
@@ -163,6 +198,7 @@ async function start() {
     tooltip.hidden = true;
     selected?.node.classList.remove('is-hovered');
     selected = undefined;
+    resumeRotation();
   }
   function inspect(event) {
     const node = document.elementFromPoint(event.clientX, event.clientY)?.closest('[data-date]');
@@ -170,6 +206,8 @@ async function start() {
     if (!day) { hideTooltip(); return; }
     selected?.node.classList.remove('is-hovered');
     selected = day;
+    stopRotation();
+    clearInertia();
     day.node.classList.add('is-hovered');
     document.getElementById('tooltip-date').textContent = day.date;
     document.getElementById('tooltip-count').textContent = `${number.format(day.contributionCount)} ${day.contributionCount === 1 ? 'contribution' : 'contributions'}`;
@@ -191,6 +229,7 @@ async function start() {
     if (pointers.size > 1) multiTouch = true;
     svg.setPointerCapture(event.pointerId);
     lastMove = { x: event.clientX, y: event.clientY, time: performance.now() };
+    stopRotation();
     startGesture();
   });
   svg.addEventListener('pointermove', event => {
@@ -223,7 +262,7 @@ async function start() {
       let speedX = -velocity.x * 12, speedY = -velocity.y * 12;
       const tick = () => {
         speedX *= 0.92; speedY *= 0.92;
-        if (Math.abs(speedX) < 0.01 && Math.abs(speedY) < 0.01) { inertia = undefined; return; }
+        if (Math.abs(speedX) < 0.01 && Math.abs(speedY) < 0.01) { inertia = undefined; resumeRotation(); return; }
         yaw += speedX * 0.005;
         pitch = clamp(pitch + speedY * 0.005, 0.18, Math.PI / 2.3);
         requestDraw();
@@ -232,6 +271,7 @@ async function start() {
       inertia = requestAnimationFrame(tick);
     }
     multiTouch = false;
+    resumeRotation();
   }
   svg.addEventListener('pointerup', event => finishGesture(event));
   svg.addEventListener('pointercancel', event => finishGesture(event, true));
@@ -263,10 +303,43 @@ async function start() {
     selected.node.classList.add('is-hovered');
     document.getElementById('selected-day').textContent = `${selected.date}: ${number.format(selected.contributionCount)} contributions`;
   });
+  svg.addEventListener('focus', () => { if (svg.matches(':focus-visible')) stopRotation(); });
+  svg.addEventListener('blur', () => resumeRotation());
+  dailyDetails.addEventListener('toggle', () => {
+    if (dailyDetails.open) { stopRotation(); clearInertia(); }
+    else hideTooltip();
+  });
+  rotationButton.addEventListener('click', () => {
+    rotationEnabled = !rotationEnabled;
+    updateRotationButton();
+    resumeRotation(0);
+  });
   new ResizeObserver(reset).observe(host);
-  reducedMotion.addEventListener('change', () => { clearInertia(); growth = 1; requestDraw(); });
-  function grow() {
+  new IntersectionObserver(([entry]) => {
+    inView = entry.isIntersecting;
+    if (inView) { requestDraw(); resumeRotation(); }
+    else {
+      stopRotation();
+      clearInertia();
+      if (growthFrame !== undefined) cancelAnimationFrame(growthFrame);
+      growthFrame = undefined;
+      growth = 1;
+    }
+  }).observe(stage);
+  reducedMotion.addEventListener('change', () => {
+    clearInertia();
     if (growthFrame !== undefined) cancelAnimationFrame(growthFrame);
+    growthFrame = undefined;
+    growth = 1;
+    rotationEnabled = !reducedMotion.matches;
+    updateRotationButton();
+    resumeRotation();
+    requestDraw();
+  });
+  function grow() {
+    stopRotation();
+    if (growthFrame !== undefined) cancelAnimationFrame(growthFrame);
+    growthFrame = undefined;
     if (reducedMotion.matches || document.hidden) { growth = 1; requestDraw(); return; }
     growth = 0;
     const started = performance.now();
@@ -275,18 +348,24 @@ async function start() {
       growth = 1 - (1 - progress) ** 3;
       requestDraw();
       if (progress < 1) growthFrame = requestAnimationFrame(tick);
-      else growthFrame = undefined;
+      else { growthFrame = undefined; resumeRotation(); }
     };
     growthFrame = requestAnimationFrame(tick);
   }
   document.addEventListener('visibilitychange', () => {
-    if (document.hidden) { clearInertia(); if (growthFrame !== undefined) cancelAnimationFrame(growthFrame); growth = 1; }
-    else requestDraw();
+    if (document.hidden) {
+      stopRotation();
+      clearInertia();
+      if (growthFrame !== undefined) cancelAnimationFrame(growthFrame);
+      growthFrame = undefined;
+      growth = 1;
+    } else { requestDraw(); resumeRotation(); }
   });
   document.getElementById('reset-view').addEventListener('click', () => { reset(); grow(); });
   fallback.hidden = true;
   status.hidden = true;
   stage.dataset.ready = 'true';
+  updateRotationButton();
   reset();
   grow();
   draw();

@@ -12,10 +12,8 @@
 <body>
   <main class="city-shell">
     <header class="city-header">
-      <div>
-        <h1>The contribution loop</h1>
-        <p id="date-range">tageecc / a rolling year of GitHub activity</p>
-      </div>
+      <h1 class="sr-only">The contribution loop</h1>
+      <p class="profile-name">tageecc</p>
       <a href="https://github.com/tageecc" class="back-link"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="m10 5-7 7 7 7M3 12h18"/></svg>GitHub profile</a>
     </header>
     <p id="activity-total"></p>
@@ -27,10 +25,6 @@
         <p class="load-status" id="load-status" role="status">Loading daily activity…</p>
       </div>
       <footer class="city-footer">
-        <div class="instructions">
-          <p id="interaction-hint">Drag to rotate · Scroll / pinch to zoom · Hover / tap a block</p>
-          <p class="detail">One block = one day · Height = activity level · Updated daily</p>
-        </div>
         <ul class="legend" aria-label="Daily contribution counts">
           <li><i style="--tier: #2d333b"></i>0</li>
           <li><i style="--tier: #065f46"></i>1–10</li>
@@ -49,15 +43,16 @@
       </details>
     </section>
     <div class="page-notes">
-      <p>3D rendering adapted from <a href="https://github.com/xiufengsun/TokenTracker">TokenTracker</a> · <a href="./assets/TokenTracker-LICENSE.txt">MIT license</a></p>
-      <button type="button" id="reset-view">Reset view</button>
+      <div class="view-actions">
+        <button type="button" id="toggle-rotation" aria-pressed="false" disabled>Auto-rotation off</button>
+        <button type="button" id="reset-view">Reset view</button>
+      </div>
     </div>
   </main>
-  <noscript><style>#load-status, #interaction-hint, .accessible-data, #reset-view { display: none; }</style><p class="script-notice">JavaScript is off. The static preview is shown; enable JavaScript to rotate and inspect daily activity.</p></noscript>
+  <noscript><style>#load-status, .accessible-data, .view-actions { display: none; }</style><p class="script-notice">JavaScript is off. The static preview is shown; enable JavaScript to rotate and inspect daily activity.</p></noscript>
   <script type="module">
     import('./assets/city.js').catch(() => {
       document.getElementById('load-status').textContent = 'The interactive viewer could not load. The static preview is shown. Reload to try again.';
-      document.getElementById('interaction-hint').textContent = 'Static preview · Reload to try the interactive view';
     });
   </script>
 </body>
