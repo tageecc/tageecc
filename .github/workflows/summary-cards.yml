@@ -36,6 +36,7 @@ jobs:
           PROFILE_USERNAME: ${{ github.repository_owner }}
         run: |
           gh api graphql \
+            -H 'Time-Zone: Asia/Shanghai' \
             -f query='query($login: String!) { user(login: $login) { contributionsCollection { contributionCalendar { totalContributions weeks { contributionDays { date contributionCount } } } } } }' \
             -f login="$PROFILE_USERNAME" \
             --jq '.data.user.contributionsCollection.contributionCalendar' \
