@@ -93,12 +93,6 @@
 
 </details>
 
-## The contribution loop
-
-Desktop: drag to rotate · Scroll to zoom · Play for auto-rotation. Mobile: use the viewer buttons.
-
-<sub>GitHub provides a fixed blue material; custom colors and growth animations are not supported.</sub>
-
 <!-- contribution-stl:start -->
 
 ```stl
@@ -31635,8 +31629,6 @@ endsolid contribution_heatmap
 ```
 
 <!-- contribution-stl:end -->
-
-<sub>One voxel = one day · Five height levels: 0, 1–10, 11–40, 41–120, 121+ contributions · Updated daily</sub>
 
 <details>
 <summary>Green palette reference</summary>
