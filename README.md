@@ -1,6 +1,12 @@
-<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/tageecc/tageecc/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/tageecc/tageecc/output/github-snake.svg" />
+  <img width="100%" alt="github contribution snake" src="https://raw.githubusercontent.com/tageecc/tageecc/output/github-snake.svg" />
+</picture>
 
-<picture><img src="./assets/header.svg" width="100%" alt="TAGEE — full-stack developer, AI agent tooling. Animated synthwave skyline." /></picture>
+<p align="right"><sub><a href="https://tageecc.github.io/tageecc/">View in 3D ↗</a></sub></p>
+
+<div align="center">
 
 <p>
   <a href="https://github.com/tageecc?tab=followers"><img src="https://img.shields.io/github/followers/tageecc?label=FOLLOWERS&style=flat-square&color=00e5d0&labelColor=150b25&logo=github&logoColor=white" alt="GitHub followers" /></a>
@@ -14,14 +20,6 @@
 
 <p align="center">
   <picture><img src="./assets/terminal.svg" width="100%" alt="Animated terminal: tagee, full-stack developer building AI agent tooling. TypeScript, JavaScript, Python, Go, Java. React, Node.js, Tauri, Three.js. Build tools that make developers faster." /></picture>
-</p>
-
-## My toolkit
-
-<p align="center">
-  <picture><img src="https://skillicons.dev/icons?i=js,ts,react,nodejs,nextjs,tailwind,threejs,tauri,rust,python,go,java&perline=6" width="360" alt="tech stack" /></picture>
-  <br/>
-  <picture><img src="https://skillicons.dev/icons?i=git,github,githubactions,docker,linux,aws,vercel,mysql,redis,vscode,apple,android&perline=6" width="360" alt="tools" /></picture>
 </p>
 
 ## Things I've built
@@ -92,14 +90,6 @@
 </p>
 
 </details>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/tageecc/tageecc/output/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/tageecc/tageecc/output/github-snake.svg" />
-  <img width="100%" alt="github contribution snake" src="https://raw.githubusercontent.com/tageecc/tageecc/output/github-snake.svg" />
-</picture>
-
-<p align="right"><sub><a href="https://tageecc.github.io/tageecc/">View in 3D ↗</a></sub></p>
 
 <div align="center">
   <sub>Build tools that make developers faster.</sub>
