@@ -1,21 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
 <title id="title">tageecc — 3D contribution activity</title>
-<desc id="desc">7,291 GitHub contributions from 2025-11-23 to 2026-11-22. One solid voxel per day; its height and shade show the activity level. Static preview.</desc>
+<desc id="desc">7,319 GitHub contributions from 2025-11-23 to 2026-11-23. One solid voxel per day; its height and shade show the activity level. Static preview.</desc>
 <rect width="1200" height="360" rx="8" fill="#0b1015"/>
 <g fill="#a3b4c5" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">
-<text x="36" y="34">tageecc / 2025-11-23 — 2026-11-22</text>
-<text x="1164" y="34" text-anchor="end">7,291 contributions · 243 active days</text>
+<text x="36" y="34">tageecc / 2025-11-23 — 2026-11-23</text>
+<text x="1164" y="34" text-anchor="end">7,319 contributions · 244 active days</text>
 </g>
-<g transform="translate(618.938 199.080) scale(1.34962)">
-<g data-date="2026-11-22" data-count="23"><title>2026-11-22: 23 contributions</title>
-<path d="M309.252,-87.807 L320.228,-89.224 L322.454,-82.231 L311.477,-80.813 Z" fill="rgb(6,185,130)" stroke="rgb(6,185,130)" stroke-width=".25" stroke-linejoin="round"/>
-<path d="M311.477,-66.169 L309.252,-73.163 L309.252,-87.807 L311.477,-80.813 Z" fill="rgb(3,95,66)" stroke="rgb(3,95,66)" stroke-width=".25" stroke-linejoin="round"/>
-<path d="M322.454,-67.587 L311.477,-66.169 L311.477,-80.813 L322.454,-82.231 Z" fill="rgb(4,119,83)" stroke="rgb(4,119,83)" stroke-width=".25" stroke-linejoin="round"/>
-</g>
+<g transform="translate(618.749 199.999) scale(1.33613)">
 <g data-date="2026-11-01" data-count="5"><title>2026-11-01: 5 contributions</title>
 <path d="M271.029,-75.548 L282.006,-76.966 L284.231,-69.972 L273.254,-68.554 Z" fill="rgb(7,117,86)" stroke="rgb(7,117,86)" stroke-width=".25" stroke-linejoin="round"/>
 <path d="M273.254,-61.232 L271.029,-68.226 L271.029,-75.548 L273.254,-68.554 Z" fill="rgb(4,60,44)" stroke="rgb(4,60,44)" stroke-width=".25" stroke-linejoin="round"/>
 <path d="M284.231,-62.650 L273.254,-61.232 L273.254,-68.554 L284.231,-69.972 Z" fill="rgb(5,75,56)" stroke="rgb(5,75,56)" stroke-width=".25" stroke-linejoin="round"/>
+</g>
+<g data-date="2026-11-22" data-count="47"><title>2026-11-22: 47 contributions</title>
+<path d="M309.252,-95.129 L320.228,-96.546 L322.454,-89.553 L311.477,-88.135 Z" fill="rgb(20,228,159)" stroke="rgb(20,228,159)" stroke-width=".25" stroke-linejoin="round"/>
+<path d="M311.477,-66.169 L309.252,-73.163 L309.252,-95.129 L311.477,-88.135 Z" fill="rgb(10,117,81)" stroke="rgb(10,117,81)" stroke-width=".25" stroke-linejoin="round"/>
+<path d="M322.454,-67.587 L311.477,-66.169 L311.477,-88.135 L322.454,-89.553 Z" fill="rgb(13,147,102)" stroke="rgb(13,147,102)" stroke-width=".25" stroke-linejoin="round"/>
 </g>
 <g data-date="2026-11-08" data-count="15"><title>2026-11-08: 15 contributions</title>
 <path d="M283.770,-84.516 L294.747,-85.933 L296.972,-78.939 L285.995,-77.522 Z" fill="rgb(6,185,130)" stroke="rgb(6,185,130)" stroke-width=".25" stroke-linejoin="round"/>
@@ -31,6 +31,11 @@
 <path d="M296.511,-93.483 L307.488,-94.901 L309.713,-87.907 L298.736,-86.489 Z" fill="rgb(20,228,159)" stroke="rgb(20,228,159)" stroke-width=".25" stroke-linejoin="round"/>
 <path d="M298.736,-64.523 L296.511,-71.517 L296.511,-93.483 L298.736,-86.489 Z" fill="rgb(10,117,81)" stroke="rgb(10,117,81)" stroke-width=".25" stroke-linejoin="round"/>
 <path d="M309.713,-65.941 L298.736,-64.523 L298.736,-86.489 L309.713,-87.907 Z" fill="rgb(13,147,102)" stroke="rgb(13,147,102)" stroke-width=".25" stroke-linejoin="round"/>
+</g>
+<g data-date="2026-11-23" data-count="4"><title>2026-11-23: 4 contributions</title>
+<path d="M311.834,-72.367 L322.811,-73.785 L325.036,-66.791 L314.059,-65.373 Z" fill="rgb(7,117,86)" stroke="rgb(7,117,86)" stroke-width=".25" stroke-linejoin="round"/>
+<path d="M314.059,-58.051 L311.834,-65.045 L311.834,-72.367 L314.059,-65.373 Z" fill="rgb(4,60,44)" stroke="rgb(4,60,44)" stroke-width=".25" stroke-linejoin="round"/>
+<path d="M325.036,-59.469 L314.059,-58.051 L314.059,-65.373 L325.036,-66.791 Z" fill="rgb(5,75,56)" stroke="rgb(5,75,56)" stroke-width=".25" stroke-linejoin="round"/>
 </g>
 <g data-date="2026-10-04" data-count="0"><title>2026-10-04: 0 contributions</title>
 <path d="M220.066,-63.031 L231.042,-64.449 L233.267,-57.455 L222.291,-56.037 Z" fill="rgb(56,63,73)" stroke="rgb(56,63,73)" stroke-width=".25" stroke-linejoin="round"/>
